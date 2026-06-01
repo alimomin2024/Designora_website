@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Designora Deployment Guide
+# Recommended: Deploy to Vercel (free) — no VPS needed!
+set -e
+
+echo "=== Designora Deployment ==="
+echo ""
+echo "RECOMMENDED: Deploy to Vercel (free, zero setup)"
+echo "  1. Push your repo to GitHub"
+echo "  2. Go to https://vercel.com and import the repo"
+echo "  3. Add environment variables in Vercel dashboard:"
+echo "     - All NEXT_PUBLIC_FIREBASE_* keys"
+echo "     - CASHFREE_APP_ID + CASHFREE_SECRET_KEY"
+echo "     - RUNWARE_API_KEY"
+echo "     - NEXT_PUBLIC_ADSENSE_ID"
+echo "  4. Deploy! Vercel handles SSL, CDN, and scaling."
+echo "  5. Point your domain to Vercel in DNS settings."
+echo ""
+echo "All AI features (upscaling, background removal, watermark removal)"
+echo "use Runware API — no server-side binaries or Python workers needed."
+echo ""
+echo "=== Optional: Self-hosted VPS ==="
+echo "If you prefer running on your own server:"
+echo "  1. Get a VPS (Hetzner \$4/mo, DigitalOcean \$6/mo)"
+echo "  2. Install Node.js 20, Nginx, Certbot, PM2"
+echo "  3. Clone repo, npm install, npm run build"
+echo "  4. Copy .env.local with all API keys"
+echo "  5. pm2 start npm --name designora -- start"
+echo "  6. Setup Nginx (see deploy/nginx.conf)"
+echo "  7. certbot --nginx -d yourdomain.com"
+echo "  8. pm2 startup && pm2 save"
