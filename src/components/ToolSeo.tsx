@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 interface FaqItem {
   readonly q: string;
   readonly a: string;
@@ -46,13 +44,11 @@ export default function ToolSeo({
 
   return (
     <section className="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
-      <Script
-        id={`seo-faq-${toolName}`}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
-        id={`seo-howto-${toolName}`}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />

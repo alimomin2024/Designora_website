@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Script from "next/script";
 import {
   Maximize,
   ArrowUpFromLine,
@@ -111,52 +110,50 @@ const fadeUp = {
   }),
 };
 
+const faqs = [
+  { q: "Is this an image upscaler AI free tool?", a: "Yes — Designora offers a free AI image upscaler that can enhance photos to 2K and 4K resolution using Real-ESRGAN deep learning. You get 3 free standard tool uses daily, and AI upscaling credits start at just 1 credit." },
+  { q: "How do I remove image background online?", a: "Upload any image to Designora's AI background remover. It automatically detects the subject and creates a clean transparent PNG cutout. No manual selection needed." },
+  { q: "Can I remove watermarks from images?", a: "Yes — paint over the watermark area with the brush tool and the AI inpainting engine fills it in with natural content matching the surrounding image." },
+  { q: "What free online image tools are available?", a: "Designora includes 11 tools: image resize, AI upscaler, background removal, watermark removal, image compressor, format converter, batch resize, color palette extractor, DPI editor, PDF converter, and AI image enhancer." },
+  { q: "Is Designora safe to use? Are my images private?", a: "Most tools run entirely in your browser — images never leave your device. AI tools send data to secure servers for processing and immediately discard it after." },
+  { q: "How much does it cost?", a: "Standard tools like resize, compress, and convert offer 3 free uses daily. AI tools use credits at 1-4 credits each. Buy 100 credits for just $1 — no subscription required." },
+  { q: "What image formats are supported?", a: "All tools support PNG, JPG, and WEBP. The PDF tool handles PDF files. Output formats vary by tool." },
+  { q: "Can I use these tools on mobile?", a: "Yes — Designora is fully responsive and works on phones, tablets, and desktops in any modern browser." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Designora",
+  url: "https://www.designoraa.in",
+  applicationCategory: "MultimediaApplication",
+  operatingSystem: "Web",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  description:
+    "Free online AI image tools — upscale, remove backgrounds, compress, resize, convert, and enhance images directly in your browser.",
+};
+
 export default function Home() {
-  const faqs = [
-    { q: "Is this an image upscaler AI free tool?", a: "Yes — Designora offers a free AI image upscaler that can enhance photos to 2K and 4K resolution using Real-ESRGAN deep learning. You get 3 free standard tool uses daily, and AI upscaling credits start at just 1 credit." },
-    { q: "How do I remove image background online?", a: "Upload any image to Designora's AI background remover. It automatically detects the subject and creates a clean transparent PNG cutout. No manual selection needed." },
-    { q: "Can I remove watermarks from images?", a: "Yes — paint over the watermark area with the brush tool and the AI inpainting engine fills it in with natural content matching the surrounding image." },
-    { q: "What free online image tools are available?", a: "Designora includes 11 tools: image resize, AI upscaler, background removal, watermark removal, image compressor, format converter, batch resize, color palette extractor, DPI editor, PDF converter, and AI image enhancer." },
-    { q: "Is Designora safe to use? Are my images private?", a: "Most tools run entirely in your browser — images never leave your device. AI tools send data to secure servers for processing and immediately discard it after." },
-    { q: "How much does it cost?", a: "Standard tools like resize, compress, and convert offer 3 free uses daily. AI tools use credits at 1-4 credits each. Buy 100 credits for just $1 — no subscription required." },
-    { q: "What image formats are supported?", a: "All tools support PNG, JPG, and WEBP. The PDF tool handles PDF files. Output formats vary by tool." },
-    { q: "Can I use these tools on mobile?", a: "Yes — Designora is fully responsive and works on phones, tablets, and desktops in any modern browser." },
-  ];
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
-  const webAppSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Designora",
-    url: "https://www.designoraa.in",
-    applicationCategory: "MultimediaApplication",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-    description:
-      "Free online AI image tools — upscale, remove backgrounds, compress, resize, convert, and enhance images directly in your browser.",
-  };
-
   return (
     <div className="relative overflow-hidden">
-      <Script id="home-faq-schema" type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
-      <Script id="home-webapp-schema" type="application/ld+json">
-        {JSON.stringify(webAppSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+      />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-primary/8 blur-[120px]" />
         <div className="absolute top-60 -right-40 h-[400px] w-[400px] rounded-full bg-accent/8 blur-[100px]" />
