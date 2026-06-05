@@ -22,21 +22,27 @@ export default function Footer() {
           <div>
             <h4 className="mb-3 text-sm font-semibold text-foreground">Tools</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/tools/resize" className="hover:text-primary transition-colors">Image Resize</Link></li>
-              <li><Link href="/tools/upscale" className="hover:text-primary transition-colors">Image Upscaler</Link></li>
-              <li><Link href="/tools/background-removal" className="hover:text-primary transition-colors">Background Removal</Link></li>
-              <li><Link href="/tools/watermark-removal" className="hover:text-primary transition-colors">Watermark Removal</Link></li>
+              <li><Link href="/tools/upscale" className="hover:text-primary transition-colors">AI Image Upscaler</Link></li>
+              <li><Link href="/tools/background-removal" className="hover:text-primary transition-colors">Background Remover</Link></li>
+              <li><Link href="/tools/watermark-removal" className="hover:text-primary transition-colors">Watermark Remover</Link></li>
+              <li><Link href="/tools/resize" className="hover:text-primary transition-colors">Image Resizer</Link></li>
               <li><Link href="/tools/compress" className="hover:text-primary transition-colors">Image Compressor</Link></li>
               <li><Link href="/tools/convert" className="hover:text-primary transition-colors">Format Converter</Link></li>
+              <li><Link href="/tools/batch-resize" className="hover:text-primary transition-colors">Batch Resizer</Link></li>
+              <li><Link href="/tools/palette" className="hover:text-primary transition-colors">Color Palette Extractor</Link></li>
+              <li><Link href="/tools/metadata" className="hover:text-primary transition-colors">DPI Editor</Link></li>
+              <li><Link href="/tools/pdf" className="hover:text-primary transition-colors">PDF to Image</Link></li>
+              <li><Link href="/tools/enhance" className="hover:text-primary transition-colors">AI Image Enhancer</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-3 text-sm font-semibold text-foreground">Account</h4>
+            <h4 className="mb-3 text-sm font-semibold text-foreground">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Guides & Tutorials</Link></li>
+              <li><Link href="/pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
               <li><Link href="/login" className="hover:text-primary transition-colors">Log in</Link></li>
               <li><Link href="/signup" className="hover:text-primary transition-colors">Sign up</Link></li>
-              <li><Link href="/pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
