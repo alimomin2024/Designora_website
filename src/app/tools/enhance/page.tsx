@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Sparkles, Download, RotateCcw, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ImageDropzone from "@/components/ImageDropzone";
 import UsageBadge from "@/components/UsageBadge";
 import BeforeAfter from "@/components/BeforeAfter";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 
 function autoEnhance(canvas: HTMLCanvasElement): HTMLCanvasElement {
@@ -58,8 +56,6 @@ function autoEnhance(canvas: HTMLCanvasElement): HTMLCanvasElement {
 }
 
 export default function EnhancePage() {
-  const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits, dailyFreeRemaining } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
@@ -81,7 +77,7 @@ export default function EnhancePage() {
     setProcessing(true);
     try {
       const ok = await deduct("enhance");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const img = new Image();
       const url = URL.createObjectURL(file);

@@ -33,7 +33,7 @@ const tools = [
     desc: "Resize to any dimensions with perfect quality.",
     href: "/tools/resize",
     gradient: "from-blue-500/20 to-cyan-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: ArrowUpFromLine,
@@ -69,7 +69,7 @@ const tools = [
     desc: "Reduce file size with quality control.",
     href: "/tools/compress",
     gradient: "from-lime-500/20 to-green-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: RefreshCw,
@@ -78,7 +78,7 @@ const tools = [
     desc: "Convert between PNG, JPG, WEBP, AVIF.",
     href: "/tools/convert",
     gradient: "from-sky-500/20 to-blue-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: Layers,
@@ -87,7 +87,7 @@ const tools = [
     desc: "Resize multiple images at once.",
     href: "/tools/batch-resize",
     gradient: "from-indigo-500/20 to-violet-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: Palette,
@@ -96,7 +96,7 @@ const tools = [
     desc: "Extract dominant colors from any image.",
     href: "/tools/palette",
     gradient: "from-pink-500/20 to-rose-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: FileText,
@@ -105,7 +105,7 @@ const tools = [
     desc: "View and edit EXIF data and DPI.",
     href: "/tools/metadata",
     gradient: "from-amber-500/20 to-yellow-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: FileImage,
@@ -114,7 +114,7 @@ const tools = [
     desc: "Convert PDF pages to images or images to PDF.",
     href: "/tools/pdf",
     gradient: "from-red-500/20 to-orange-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
   {
     icon: Sparkles,
@@ -123,7 +123,7 @@ const tools = [
     desc: "Auto brightness, contrast, and sharpness.",
     href: "/tools/enhance",
     gradient: "from-fuchsia-500/20 to-purple-500/20",
-    creditCost: 1,
+    creditCost: 0,
   },
 ];
 
@@ -163,10 +163,8 @@ export default function DashboardPage() {
               Welcome, {user.displayName || user.email?.split("@")[0]}
             </h1>
             <p className="mt-1 text-muted-foreground">
-              {dailyFreeRemaining > 0
-                ? `${dailyFreeRemaining} free uses left today`
-                : "Daily free uses exhausted"}
-              {credits > 0 ? ` · ${credits} credits` : ""}
+              Non-AI tools are free and unlimited. AI tools use credits.
+              {` · ${credits} credits`}
             </p>
           </div>
           <div className="flex items-center gap-3">

@@ -25,8 +25,15 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
       return;
     }
     const auth = getAuthInstance();
-    const unsub = onAuthStateChanged(auth, (u) => {
+    const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u);
+      if (u) {
+        try {
+          await ensureUserDoc(u);
+        } catch {
+          // Keep auth UX working even if Firestore writes are restricted.
+        }
+      }
       setLoading(false);
     });
     return unsub;

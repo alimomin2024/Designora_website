@@ -18,20 +18,20 @@ const CREDIT_PACKS = [
 ];
 
 const TOOL_COSTS = [
-  { tool: "Image Resize", cost: "1 credit" },
+  { tool: "Image Resize", cost: "Free (unlimited)" },
   { tool: "Image Upscaler (2K)", cost: "1 credit" },
   { tool: "Image Upscaler (4K)", cost: "2 credits" },
   { tool: "Image Upscaler (4K 600 DPI)", cost: "4 credits" },
   { tool: "Background Removal", cost: "4 credits" },
   { tool: "Watermark Removal", cost: "4 credits" },
-  { tool: "All other tools", cost: "1 credit each" },
+  { tool: "All non-AI tools", cost: "Free (unlimited)" },
 ];
 
 export default function PricingContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { user, loading: authLoading } = useAuth();
-  const { credits, dailyFreeRemaining, refresh } = useUsage();
+  const { credits, refresh } = useUsage();
   const [paying, setPaying] = useState(false);
   const [verifying, setVerifying] = useState(false);
   const [couponLoading, setCouponLoading] = useState(false);
@@ -160,13 +160,10 @@ export default function PricingContent() {
           Simple, honest <span className="gradient-text">pricing</span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          3 free uses every day for standard tools. AI tools use credits only.
+          Non-AI tools are free and unlimited. AI tools use credits only.
         </p>
         {user && (
           <div className="mt-4 flex items-center justify-center gap-4 text-sm">
-            <span className="flex items-center gap-1 text-emerald-400">
-              <Gift className="h-4 w-4" /> {dailyFreeRemaining} free uses left today
-            </span>
             <span className="flex items-center gap-1 text-primary">
               <Coins className="h-4 w-4" /> {credits} credits
             </span>
@@ -195,10 +192,10 @@ export default function PricingContent() {
         className="glass rounded-2xl p-6 mb-8 text-center"
       >
         <h2 className="text-xl font-semibold mb-2 flex items-center justify-center gap-2">
-          <Gift className="h-5 w-5 text-emerald-400" /> Free Tier
+          <Gift className="h-5 w-5 text-emerald-400" /> Free Non-AI Tools
         </h2>
         <p className="text-muted-foreground text-sm">
-          Every account gets <strong>3 free uses per day</strong> for standard tools, resetting at midnight UTC. AI tools (Upscale, Background Removal, Watermark Removal) are credit-only.
+          All non-AI tools (resize, compress, convert, batch resize, palette, metadata, PDF, enhance) are <strong>free and unlimited</strong>. AI tools (Upscale, Background Removal, Watermark Removal) use credits.
         </p>
       </motion.div>
 

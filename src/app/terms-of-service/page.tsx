@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
       <ul>
         <li>Credits are required for paid tool usage.</li>
         <li>Tool credit costs are listed on the pricing page and may change over time.</li>
-        <li>3 daily free uses apply only to eligible non-AI tools.</li>
+        <li>Non-AI tools may be offered as free and unlimited based on current pricing policy.</li>
       </ul>
 
       <h2>4. Acceptable Use</h2>

@@ -4,9 +4,9 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "AI Image Upscaler Free Online — Upscale to 2K & 4K, No Signup",
+  title: "Free AI Image Upscaling Tool - Increase Resolution of Your Images Online",
   description:
-    "Upscale images to 2K and 4K for free using Real-ESRGAN AI. No signup, no watermark. Enhance photos, artwork, and product images online in seconds.",
+    "Increase image resolution online with our free AI image upscaling tool. Upscale photos to 2K and 4K, sharpen details, and improve quality in seconds.",
   alternates: { canonical: "/tools/upscale" },
   openGraph: {
     title: "Free AI Image Upscaler — 2K & 4K Online",

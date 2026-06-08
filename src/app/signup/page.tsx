@@ -68,7 +68,7 @@ export default function SignupPage() {
           </div>
           <h1 className="text-2xl font-bold">Create your account</h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Start with 3 free uses of every tool
+            Non-AI tools are free and unlimited
           </p>
         </div>
 

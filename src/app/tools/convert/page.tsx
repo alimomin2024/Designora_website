@@ -1,13 +1,11 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { RefreshCw, Download, RotateCcw, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ImageDropzone from "@/components/ImageDropzone";
 import UsageBadge from "@/components/UsageBadge";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 
 const FORMATS = [
@@ -17,8 +15,6 @@ const FORMATS = [
 ];
 
 export default function ConvertPage() {
-  const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits, dailyFreeRemaining } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
@@ -41,7 +37,7 @@ export default function ConvertPage() {
     setProcessing(true);
     try {
       const ok = await deduct("convert");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const img = new Image();
       const url = URL.createObjectURL(file);

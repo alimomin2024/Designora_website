@@ -1,19 +1,15 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { FileImage, Download, RotateCcw, Loader2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import UsageBadge from "@/components/UsageBadge";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 
 type Mode = "pdf-to-image" | "image-to-pdf";
 
 export default function PdfPage() {
-  const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits, dailyFreeRemaining } = useUsage();
 
   const [mode, setMode] = useState<Mode>("pdf-to-image");
@@ -42,7 +38,7 @@ export default function PdfPage() {
     setProcessing(true);
     try {
       const ok = await deduct("pdf");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const pdfjsLib = await import("pdfjs-dist");
       pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
@@ -79,7 +75,7 @@ export default function PdfPage() {
     setProcessing(true);
     try {
       const ok = await deduct("pdf");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const { jsPDF } = await import("jspdf");
 

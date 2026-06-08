@@ -1,13 +1,11 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Palette, RotateCcw, Loader2, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ImageDropzone from "@/components/ImageDropzone";
 import UsageBadge from "@/components/UsageBadge";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 
 interface ColorInfo {
@@ -70,8 +68,6 @@ function kMeansColors(imageData: ImageData, k = 6, iterations = 20): ColorInfo[]
 }
 
 export default function PalettePage() {
-  const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits, dailyFreeRemaining } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
@@ -94,7 +90,7 @@ export default function PalettePage() {
     setProcessing(true);
     try {
       const ok = await deduct("palette");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const img = new Image();
       const url = URL.createObjectURL(file);

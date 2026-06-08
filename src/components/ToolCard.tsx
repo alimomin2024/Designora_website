@@ -19,7 +19,7 @@ export default function ToolCard({
   description,
   href,
   gradient,
-  creditCost = 1,
+  creditCost = 0,
 }: Props) {
   return (
     <Link href={href} className="group block">
@@ -31,7 +31,7 @@ export default function ToolCard({
             <Icon className="h-6 w-6 text-foreground" />
           </div>
           <span className="text-xs text-muted-foreground">
-            {creditCost} credit{creditCost !== 1 ? "s" : ""}
+            {creditCost === 0 ? "Free" : `${creditCost} credit${creditCost !== 1 ? "s" : ""}`}
           </span>
         </div>
         <h3 className="mt-4 text-lg font-semibold">{title}</h3>

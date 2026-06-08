@@ -1,24 +1,20 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Layers, Download, RotateCcw, Loader2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import UsageBadge from "@/components/UsageBadge";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 
 export default function BatchResizePage() {
-  const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits, dailyFreeRemaining } = useUsage();
 
   const [files, setFiles] = useState<File[]>([]);
-  const [width, setWidth] = useState(800);
-  const [height, setHeight] = useState(600);
+  const [widthInput, setWidthInput] = useState("800");
+  const [heightInput, setHeightInput] = useState("600");
   const [results, setResults] = useState<string[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
@@ -53,11 +49,17 @@ export default function BatchResizePage() {
 
   async function handleBatchResize() {
     if (!files.length) return;
+    const width = Number(widthInput);
+    const height = Number(heightInput);
+    if (!width || !height || width < 1 || height < 1) {
+      setError("Please enter valid width and height values.");
+      return;
+    }
     setError("");
     setProcessing(true);
     try {
       const ok = await deduct("batchResize");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const urls: string[] = [];
       for (const f of files) {
@@ -109,15 +111,29 @@ export default function BatchResizePage() {
               <div className="grid gap-4 sm:grid-cols-2 mb-4">
                 <div className="space-y-1.5">
                   <Label>Width (px)</Label>
-                  <Input type="number" min={1} value={width} onChange={(e) => setWidth(Number(e.target.value))} />
+                  <Input
+                    type="text"
+                    inputMode="numeric"
+                    value={widthInput}
+                    onChange={(e) => setWidthInput(e.target.value.replace(/[^\d]/g, ""))}
+                  />
                 </div>
                 <div className="space-y-1.5">
                   <Label>Height (px)</Label>
-                  <Input type="number" min={1} value={height} onChange={(e) => setHeight(Number(e.target.value))} />
+                  <Input
+                    type="text"
+                    inputMode="numeric"
+                    value={heightInput}
+                    onChange={(e) => setHeightInput(e.target.value.replace(/[^\d]/g, ""))}
+                  />
                 </div>
               </div>
               <div className="flex gap-3">
-                <Button onClick={handleBatchResize} disabled={processing} className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button
+                  onClick={handleBatchResize}
+                  disabled={processing || !widthInput || !heightInput}
+                  className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                >
                   {processing ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Resizing…</> : `Resize ${files.length} Images`}
                 </Button>
                 <Button variant="outline" onClick={reset}><RotateCcw className="h-4 w-4" /></Button>

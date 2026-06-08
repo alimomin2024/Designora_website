@@ -6,6 +6,7 @@ import {
   getUserDoc,
   canUse,
   deductCredits,
+  getToolCost,
   getDailyFreeRemaining,
   type ToolName,
   type UserDoc,
@@ -38,13 +39,45 @@ export function useUsage() {
 
   const deduct = useCallback(
     async (tool: ToolName, tier?: string): Promise<boolean> => {
+      const cost = getToolCost(tool, tier);
+      if (cost === 0) return true;
       if (!user) return false;
+      const today = new Date().toISOString().slice(0, 10);
+
+      const applyLocalUsage = (useFree: boolean) => {
+        setUserDoc((prev) => {
+          if (!prev) return prev;
+          if (useFree) {
+            const sameDay = prev.dailyFreeDate === today;
+            return {
+              ...prev,
+              dailyFreeDate: today,
+              dailyFreeUsed: sameDay ? prev.dailyFreeUsed + 1 : 1,
+            };
+          }
+          return {
+            ...prev,
+            credits: Math.max(0, prev.credits - cost),
+          };
+        });
+      };
+
       try {
         const check = await canUse(user.uid, tool, tier);
         if (!check.allowed) return false;
-        const ok = await deductCredits(user.uid, tool, tier);
-        if (ok) await refresh();
-        return ok;
+        try {
+          const ok = await deductCredits(user.uid, tool, tier);
+          if (ok) {
+            applyLocalUsage(check.useFree);
+            await refresh();
+          }
+          return ok;
+        } catch {
+          // If usage is allowed but write fails (strict client rules/legacy docs),
+          // don't block the tool action with an incorrect pricing redirect.
+          applyLocalUsage(check.useFree);
+          return true;
+        }
       } catch {
         return false;
       }

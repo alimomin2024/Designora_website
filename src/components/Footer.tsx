@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,9 +8,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/20">
-                <Sparkles className="h-5 w-5 text-primary" />
-              </div>
+              <Image src="/logo.svg" alt="Designora" width={32} height={32} className="h-8 w-8" />
               <span className="text-lg font-bold gradient-text">Designora</span>
             </div>
             <p className="text-sm text-muted-foreground">

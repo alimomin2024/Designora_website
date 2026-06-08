@@ -111,12 +111,12 @@ const fadeUp = {
 };
 
 const faqs = [
-  { q: "Is this an image upscaler AI free tool?", a: "Yes — Designora offers a free AI image upscaler that can enhance photos to 2K and 4K resolution using Real-ESRGAN deep learning. You get 3 free standard tool uses daily, and AI upscaling credits start at just 1 credit." },
+  { q: "Is this an image upscaler AI free tool?", a: "Yes — Designora offers a free AI image tool suite, and AI upscaling credits start at just 1 credit for 2K output." },
   { q: "How do I remove image background online?", a: "Upload any image to Designora's AI background remover. It automatically detects the subject and creates a clean transparent PNG cutout. No manual selection needed." },
   { q: "Can I remove watermarks from images?", a: "Yes — paint over the watermark area with the brush tool and the AI inpainting engine fills it in with natural content matching the surrounding image." },
   { q: "What free online image tools are available?", a: "Designora includes 11 tools: image resize, AI upscaler, background removal, watermark removal, image compressor, format converter, batch resize, color palette extractor, DPI editor, PDF converter, and AI image enhancer." },
   { q: "Is Designora safe to use? Are my images private?", a: "Most tools run entirely in your browser — images never leave your device. AI tools send data to secure servers for processing and immediately discard it after." },
-  { q: "How much does it cost?", a: "Standard tools like resize, compress, and convert offer 3 free uses daily. AI tools use credits at 1-4 credits each. Buy 100 credits for just $1 — no subscription required." },
+  { q: "How much does it cost?", a: "Non-AI tools like resize, compress, convert, batch resize, palette, metadata, PDF, and enhance are free and unlimited. AI tools use credits at 1-4 credits each. Buy 100 credits for just $1 — no subscription required." },
   { q: "What image formats are supported?", a: "All tools support PNG, JPG, and WEBP. The PDF tool handles PDF files. Output formats vary by tool." },
   { q: "Can I use these tools on mobile?", a: "Yes — Designora is fully responsive and works on phones, tablets, and desktops in any modern browser." },
 ];
@@ -177,7 +177,7 @@ export default function Home() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             Resize, upscale, remove backgrounds, compress, convert, extract colors,
-            and more — all in one place. 3 free uses daily for standard tools, then just $1 for 100 credits.
+            and more — all in one place. Non-AI tools are free and unlimited, and AI tools start at just 1 credit.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link href="/signup">
@@ -269,7 +269,7 @@ export default function Home() {
           <div className="glass rounded-2xl p-5 text-center">
             <h3 className="text-lg font-semibold">Affordable</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              3 free daily uses for standard tools. AI tools start at 1 credit each — 100 credits for $1.
+              Non-AI tools are free and unlimited. AI tools start at 1 credit each — 100 credits for $1.
             </p>
           </div>
         </div>
@@ -303,13 +303,13 @@ export default function Home() {
               Start free, scale with <span className="gradient-text">credits</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-              Every account gets 3 free uses daily for standard tools. AI tools use credits.
+              Every account gets unlimited free non-AI tools. AI tools use credits.
               Need more? Buy 100 credits for just $1 and use any tool, anytime.
             </p>
             <div className="mt-8 flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
               <div className="space-y-2 text-left">
                 {[
-                  "3 free uses every day",
+                  "Unlimited free non-AI tools",
                   `All ${tools.length} tools included`,
                   "No subscription required",
                 ].map((item) => (

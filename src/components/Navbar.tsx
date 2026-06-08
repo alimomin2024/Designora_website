@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles, LogOut, User } from "lucide-react";
+import { Menu, X, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -24,9 +25,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/20">
-            <Sparkles className="h-5 w-5 text-primary" />
-          </div>
+          <Image src="/logo.svg" alt="Designora" width={32} height={32} className="h-8 w-8" />
           <span className="text-lg font-bold gradient-text">Designora</span>
         </Link>
 

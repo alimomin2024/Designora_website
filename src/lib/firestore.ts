@@ -31,11 +31,9 @@ export interface UserDoc {
   createdAt: number;
 }
 
-const DAILY_FREE_LIMIT = 3;
 const COUPON_REWARDS: Record<string, number> = {
   DESI1998: 100,
 };
-const CREDIT_ONLY_TOOLS: ToolName[] = ["upscale", "bgRemoval", "watermark"];
 
 function todayUTC(): string {
   return new Date().toISOString().slice(0, 10);
@@ -65,20 +63,41 @@ export async function ensureUserDoc(user: User) {
 export async function getUserDoc(uid: string): Promise<UserDoc | null> {
   const snap = await getDoc(usersDoc(uid));
   if (!snap.exists()) return null;
-  const data = snap.data() as UserDoc;
-  if (data.dailyFreeDate !== todayUTC()) {
-    data.dailyFreeUsed = 0;
-    data.dailyFreeDate = todayUTC();
+  const raw = snap.data() as Partial<UserDoc>;
+  const now = todayUTC();
+  const normalized: UserDoc = {
+    email: raw.email ?? "",
+    displayName: raw.displayName ?? "",
+    credits: typeof raw.credits === "number" ? raw.credits : 0,
+    dailyFreeUsed: typeof raw.dailyFreeUsed === "number" ? raw.dailyFreeUsed : 0,
+    dailyFreeDate: raw.dailyFreeDate ?? now,
+    totalPurchased: typeof raw.totalPurchased === "number" ? raw.totalPurchased : 0,
+    createdAt: typeof raw.createdAt === "number" ? raw.createdAt : Date.now(),
+  };
+
+  const patch: Partial<UserDoc> = {};
+  if (typeof raw.credits !== "number") patch.credits = normalized.credits;
+  if (typeof raw.dailyFreeUsed !== "number") patch.dailyFreeUsed = normalized.dailyFreeUsed;
+  if (!raw.dailyFreeDate) patch.dailyFreeDate = normalized.dailyFreeDate;
+  if (typeof raw.totalPurchased !== "number") patch.totalPurchased = normalized.totalPurchased;
+  if (typeof raw.createdAt !== "number") patch.createdAt = normalized.createdAt;
+
+  if (normalized.dailyFreeDate !== now) {
+    normalized.dailyFreeUsed = 0;
+    normalized.dailyFreeDate = now;
+    patch.dailyFreeUsed = 0;
+    patch.dailyFreeDate = now;
+  }
+
+  if (Object.keys(patch).length > 0) {
     try {
-      await updateDoc(usersDoc(uid), {
-        dailyFreeUsed: 0,
-        dailyFreeDate: todayUTC(),
-      });
+      await updateDoc(usersDoc(uid), patch);
     } catch {
-      // Gracefully continue even if user rules reject updates for legacy docs.
+      // Continue with normalized in-memory data when client writes are blocked.
     }
   }
-  return data;
+
+  return normalized;
 }
 
 export function getToolCost(tool: ToolName, tier?: string): number {
@@ -90,7 +109,7 @@ export function getToolCost(tool: ToolName, tier?: string): number {
   if (tool === "bgRemoval" || tool === "watermark") {
     return 4;
   }
-  return 1;
+  return 0;
 }
 
 export async function canUse(
@@ -98,17 +117,13 @@ export async function canUse(
   tool: ToolName,
   tier?: string,
 ): Promise<{ allowed: boolean; reason: string; useFree: boolean }> {
-  const d = await getUserDoc(uid);
-  if (!d) return { allowed: false, reason: "Account not found", useFree: false };
-
-  if (
-    d.dailyFreeUsed < DAILY_FREE_LIMIT &&
-    !CREDIT_ONLY_TOOLS.includes(tool)
-  ) {
-    return { allowed: true, reason: "free", useFree: true };
+  const cost = getToolCost(tool, tier);
+  if (cost === 0) {
+    return { allowed: true, reason: "free-unlimited", useFree: false };
   }
 
-  const cost = getToolCost(tool, tier);
+  const d = await getUserDoc(uid);
+  if (!d) return { allowed: false, reason: "Account not found", useFree: false };
   if (d.credits >= cost) {
     return { allowed: true, reason: "credits", useFree: false };
   }
@@ -125,20 +140,14 @@ export async function deductCredits(
   tool: ToolName,
   tier?: string,
 ): Promise<boolean> {
+  const cost = getToolCost(tool, tier);
+  if (cost === 0) return true;
+
   const check = await canUse(uid, tool, tier);
   if (!check.allowed) return false;
-
-  if (check.useFree) {
-    await updateDoc(usersDoc(uid), {
-      dailyFreeUsed: increment(1),
-      dailyFreeDate: todayUTC(),
-    });
-  } else {
-    const cost = getToolCost(tool, tier);
-    await updateDoc(usersDoc(uid), {
-      credits: increment(-cost),
-    });
-  }
+  await updateDoc(usersDoc(uid), {
+    credits: increment(-cost),
+  });
   return true;
 }
 
@@ -183,6 +192,6 @@ export async function redeemCoupon(uid: string, couponCode: string) {
 }
 
 export function getDailyFreeRemaining(userDoc: UserDoc): number {
-  if (userDoc.dailyFreeDate !== todayUTC()) return DAILY_FREE_LIMIT;
-  return Math.max(0, DAILY_FREE_LIMIT - userDoc.dailyFreeUsed);
+  if (!userDoc) return 0;
+  return 0;
 }

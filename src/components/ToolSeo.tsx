@@ -1,3 +1,5 @@
+import AdSlot from "@/components/AdSlot";
+
 interface FaqItem {
   readonly q: string;
   readonly a: string;
@@ -44,6 +46,7 @@ export default function ToolSeo({
 
   return (
     <section className="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
+      <AdSlot slot="home-hero-below" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -78,6 +81,8 @@ export default function ToolSeo({
             ))}
           </ul>
         </div>
+
+        <AdSlot slot="home-tools-below" />
 
         <div>
           <h3 className="text-lg font-semibold">Frequently Asked Questions</h3>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { FileText, Download, RotateCcw, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ImageDropzone from "@/components/ImageDropzone";
 import UsageBadge from "@/components/UsageBadge";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 
 interface MetadataInfo {
@@ -20,8 +18,6 @@ interface MetadataInfo {
 }
 
 export default function MetadataPage() {
-  const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits, dailyFreeRemaining } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
@@ -56,7 +52,7 @@ export default function MetadataPage() {
     setProcessing(true);
     try {
       const ok = await deduct("metadata");
-      if (!ok) { router.push("/pricing"); return; }
+      if (!ok) throw new Error("This tool is currently unavailable.");
 
       const img = new Image();
       const url = URL.createObjectURL(file);

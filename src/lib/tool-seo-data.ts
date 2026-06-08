@@ -18,7 +18,7 @@ export const toolSeoData = {
       "Prepare images for large-format prints and posters.",
     ],
     faqs: [
-      { q: "Is the AI image upscaler free?", a: "You can use Designora with daily free credits for standard tools. AI upscaling uses affordable credits starting at just 1 credit per use." },
+      { q: "Is the AI image upscaler free?", a: "All non-AI tools on Designora are free and unlimited. AI upscaling uses affordable credits starting at just 1 credit per use." },
       { q: "What is the maximum upscale factor?", a: "You can upscale images up to 4x their original resolution, producing 4K quality output with optional 600 DPI for print." },
       { q: "Does upscaling reduce image quality?", a: "No — Real-ESRGAN AI adds realistic detail and sharpness during upscaling, unlike simple interpolation which causes blur." },
       { q: "What image formats are supported?", a: "PNG, JPG, and WEBP images up to 20 MB." },
