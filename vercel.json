@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/downloads/:path*",
+      "destination": "https://files.designoraa.in/downloads/:path*",
+      "statusCode": 301
+    }
+  ]
+}

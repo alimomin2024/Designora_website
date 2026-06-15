@@ -25,7 +25,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="Designora" width={32} height={32} className="h-8 w-8" />
+          <Image src="/logo.svg" alt="Designora" width={32} height={32} className="h-8 w-8" priority />
           <span className="text-lg font-bold gradient-text">Designora</span>
         </Link>
 

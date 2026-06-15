@@ -1,9 +1,9 @@
 export const toolSeoData = {
   upscale: {
     toolName: "upscale",
-    headline: "Free AI Image Upscaler — Enhance Photos to 2K & 4K Online",
+    headline: "Free AI Image Upscaler — Convert Images to 4K Resolution Online",
     description:
-      "Designora's AI image upscaler uses Real-ESRGAN deep learning to enlarge photos up to 4x while preserving sharpness and detail. Upload any low-resolution image and get a crisp, high-quality version in seconds. No software to install — works directly in your browser. Perfect for enhancing product photos, artwork, old pictures, and social media images.",
+      "Designora's AI image upscaler uses Real-ESRGAN deep learning to enlarge photos up to 4x while preserving sharpness and detail. Convert any image to 4K resolution online — upload a low-resolution photo and get a crisp, high-quality 4K version in seconds. No software to install, works directly in your browser. Perfect for making images 4K for ecommerce, printing, social media, and old photo restoration. The best free 4K photo editor available online.",
     steps: [
       "Upload your image (PNG, JPG, or WEBP up to 20 MB).",
       "Select your upscale tier: 2K, 4K, or 4K with 600 DPI for print.",
@@ -29,7 +29,7 @@ export const toolSeoData = {
     toolName: "background-removal",
     headline: "AI Background Remover — Remove Image Background Online Free",
     description:
-      "Remove backgrounds from images instantly using AI-powered segmentation. Designora uses BiRefNet deep learning to detect subjects and create clean transparent PNG cutouts in one click. No manual selection needed — just upload and download. Ideal for product photography, profile pictures, marketing materials, and ecommerce listings.",
+      "Remove backgrounds from images instantly using AI-powered segmentation. Designora uses BiRefNet deep learning to detect subjects and create clean transparent PNG cutouts in one click. No manual selection needed — just upload and download. Ideal for product photography, profile pictures, marketing materials, and ecommerce listings. Works with people, products, animals, logos, and complex scenes with hair, fur, and transparent objects.",
     steps: [
       "Upload your image (PNG, JPG, or WEBP).",
       "AI automatically detects the subject and removes the background.",
@@ -37,17 +37,21 @@ export const toolSeoData = {
       "Download the clean PNG with transparent background.",
     ],
     useCases: [
-      "Create white-background product photos for Amazon, eBay, and Shopify.",
-      "Make transparent logos and graphics for presentations.",
-      "Remove distracting backgrounds from profile pictures.",
-      "Prepare images for photo compositing and graphic design.",
-      "Create clean cutouts for social media posts and ads.",
+      "Create white-background product photos for Amazon, eBay, Etsy, and Shopify.",
+      "Make transparent logos and graphics for presentations and pitch decks.",
+      "Remove distracting backgrounds from profile pictures and headshots.",
+      "Prepare images for photo compositing, graphic design, and collages.",
+      "Create clean cutouts for social media posts, ads, and thumbnails.",
+      "Design stickers, merchandise, and print-on-demand products.",
+      "Generate passport and ID photos with plain backgrounds.",
     ],
     faqs: [
-      { q: "Can I remove backgrounds for free?", a: "AI background removal uses credits. You can earn free credits with coupon codes or purchase 100 credits for just $1." },
-      { q: "Does it work with complex backgrounds?", a: "Yes — the BiRefNet AI model handles complex backgrounds, hair detail, and semi-transparent objects with high accuracy." },
+      { q: "Can I remove backgrounds for free?", a: "AI background removal uses credits (4 per image). You can earn free credits with coupon codes or purchase 100 credits for just $1." },
+      { q: "Does it work with complex backgrounds?", a: "Yes — the BiRefNet AI model handles complex backgrounds, hair detail, fur, glass, and semi-transparent objects with high accuracy." },
       { q: "What format is the output?", a: "Transparent PNG so you can place the subject on any background." },
       { q: "Is there a file size limit?", a: "Images up to 20 MB in PNG, JPG, or WEBP format are supported." },
+      { q: "Can I remove backgrounds from product photos?", a: "Yes — this tool is perfect for ecommerce product photography. Upload your product photo and get a clean cutout with transparent background, ready for white background or any custom background." },
+      { q: "How accurate is the AI background remover?", a: "BiRefNet is one of the most accurate background removal models available. It handles fine details like hair strands, fur, and semi-transparent edges that simpler tools miss." },
     ],
   },
 
@@ -96,7 +100,7 @@ export const toolSeoData = {
       "Batch prepare images for email marketing templates.",
     ],
     faqs: [
-      { q: "Is image resizing free?", a: "Yes — resizing is a standard tool eligible for 3 free daily uses, then 1 credit per use." },
+      { q: "Is image resizing free?", a: "Yes — image resizing is completely free and unlimited on Designora. No credits, no signup, no limits." },
       { q: "Does resizing reduce image quality?", a: "Designora uses high-quality browser-based resampling to minimize quality loss during resizing." },
       { q: "Can I resize without changing aspect ratio?", a: "Yes, toggle the aspect ratio lock to maintain the original proportions while changing dimensions." },
       { q: "Is my image uploaded to a server?", a: "No — image resizing happens entirely in your browser. Your images never leave your device." },
@@ -105,27 +109,30 @@ export const toolSeoData = {
 
   compress: {
     toolName: "compress",
-    headline: "Image Compressor Online — Reduce JPG PNG File Size Free",
+    headline: "Image Compressor Online Free — Reduce JPG PNG WEBP File Size",
     description:
-      "Compress images online to reduce file size while keeping visual quality. Adjust the quality slider to find the perfect balance between file size and appearance. Works with JPG, PNG, and WEBP images directly in your browser — no uploads to external servers. Similar to TinyPNG but with full quality control.",
+      "Compress images online for free to reduce file size while keeping visual quality. Adjust the quality slider to find the perfect balance between file size and appearance. Works with JPG, PNG, and WEBP images directly in your browser — no uploads to external servers. Like TinyPNG but free, unlimited, and with full quality control. Reduce image sizes by up to 80% for faster websites, smaller email attachments, and optimized social media uploads.",
     steps: [
-      "Upload your image.",
-      "Adjust the quality slider (lower = smaller file size).",
-      "Preview the compressed result and compare file sizes.",
+      "Upload your image (JPG, PNG, or WEBP).",
+      "Adjust the quality slider — lower values mean smaller file sizes.",
+      "Preview the compressed result and compare original vs compressed sizes.",
       "Download the optimized image.",
     ],
     useCases: [
-      "Optimize website images for faster page load speed and better SEO.",
-      "Reduce email attachment sizes.",
-      "Compress product photos for ecommerce upload limits.",
-      "Shrink images for mobile-friendly web design.",
-      "Batch optimize images for blog posts and articles.",
+      "Optimize website images for faster page load speed, better Core Web Vitals, and higher SEO rankings.",
+      "Reduce email attachment sizes to stay under limits.",
+      "Compress product photos for ecommerce upload limits on Amazon, Etsy, and Shopify.",
+      "Shrink images for mobile-friendly web design and responsive layouts.",
+      "Optimize blog post images to reduce page weight and improve reader experience.",
+      "Prepare images for social media uploads without losing visible quality.",
     ],
     faqs: [
-      { q: "How much can I reduce file size?", a: "Typically 50-80% reduction depending on the quality setting and image content." },
-      { q: "Does compression lose image quality?", a: "Some quality reduction occurs at lower settings, but the visual difference is often imperceptible. Use the preview to find your ideal balance." },
-      { q: "Is compression processed locally?", a: "Yes — compression happens entirely in your browser. Your images are never uploaded to our servers." },
+      { q: "Is the image compressor free?", a: "Yes — image compression is completely free and unlimited on Designora. No credits, no signup, no limits." },
+      { q: "How much can I reduce file size?", a: "Typically 50-80% reduction depending on the quality setting and image content. A 5 MB photo can often be compressed to under 500 KB." },
+      { q: "Does compression lose image quality?", a: "At quality settings above 75%, the visual difference is typically imperceptible to the human eye. Use the preview to find your ideal balance." },
+      { q: "Is compression processed locally?", a: "Yes — compression happens entirely in your browser. Your images are never uploaded to our servers, ensuring complete privacy." },
       { q: "What formats can I compress?", a: "JPG, PNG, and WEBP images are all supported." },
+      { q: "Is this better than TinyPNG?", a: "Designora's compressor gives you full control over the quality slider, runs locally in your browser (no upload), and is completely free with no usage limits." },
     ],
   },
 
@@ -147,7 +154,7 @@ export const toolSeoData = {
       "Batch convert images between formats for design workflows.",
     ],
     faqs: [
-      { q: "Is the format converter free?", a: "Yes — 3 free daily uses, then 1 credit per conversion." },
+      { q: "Is the format converter free?", a: "Yes — format conversion is completely free and unlimited on Designora. No credits, no signup required." },
       { q: "Does converting formats lose quality?", a: "Converting to JPG involves lossy compression; PNG and WEBP can be lossless. Choose based on your quality needs." },
       { q: "Can I convert WEBP to PNG?", a: "Yes — convert between any combination of PNG, JPG, and WEBP." },
       { q: "Are my images uploaded to a server?", a: "No — all conversion happens locally in your browser." },
@@ -180,25 +187,29 @@ export const toolSeoData = {
 
   palette: {
     toolName: "palette",
-    headline: "Color Palette Extractor — Extract Colors from Image Online",
+    headline: "Color Palette Extractor — Extract Colors from Image Online Free",
     description:
-      "Extract dominant colors from any image to generate a color palette. Designora uses k-means clustering to identify the most prominent colors in your photo. Copy hex codes for use in graphic design, web design, branding, and creative projects.",
+      "Extract dominant colors from any image to generate a color palette with hex codes. Designora uses k-means clustering to identify the most prominent colors in your photo, logo, or artwork. Copy hex codes instantly for use in graphic design, web design, CSS, branding guidelines, and creative projects. Free, unlimited, works in your browser.",
     steps: [
-      "Upload any image.",
+      "Upload any image (JPG, PNG, or WEBP).",
       "The tool analyzes pixels and extracts dominant colors using k-means clustering.",
       "View the generated color palette with hex codes.",
       "Copy individual color codes for your design projects.",
     ],
     useCases: [
-      "Extract brand colors from logos and marketing materials.",
-      "Generate color schemes from inspiration photos for web design.",
-      "Create consistent palettes for social media branding.",
-      "Analyze color composition in photography and art.",
+      "Extract brand colors from logos and marketing materials for brand guidelines.",
+      "Generate color schemes from inspiration photos for web design and CSS.",
+      "Create consistent palettes for social media branding and content calendars.",
+      "Analyze color composition in photography and digital art.",
+      "Match product colors for ecommerce listings and catalog consistency.",
+      "Create mood boards with extracted color palettes for client presentations.",
     ],
     faqs: [
-      { q: "How many colors are extracted?", a: "The tool extracts the dominant colors from your image, typically 5-8 prominent colors." },
-      { q: "Can I copy hex codes?", a: "Yes — each extracted color displays its hex code which you can copy for use in any design tool." },
-      { q: "Does this work with any image?", a: "Yes — upload any JPG, PNG, or WEBP image to extract its color palette." },
+      { q: "Is the color palette extractor free?", a: "Yes — color palette extraction is completely free and unlimited on Designora. No credits, no signup required." },
+      { q: "How many colors are extracted?", a: "The tool extracts the dominant colors from your image, typically 5-8 prominent colors that represent the most significant color areas." },
+      { q: "Can I copy hex codes?", a: "Yes — each extracted color displays its hex code which you can copy for use in CSS, Figma, Canva, Photoshop, or any design tool." },
+      { q: "Does this work with any image?", a: "Yes — upload any JPG, PNG, or WEBP image to extract its color palette. Works with photos, logos, artwork, and screenshots." },
+      { q: "How does color extraction work?", a: "Designora uses k-means clustering, an algorithm that groups similar pixels together to find the most dominant color groups in your image." },
     ],
   },
 
@@ -245,7 +256,7 @@ export const toolSeoData = {
       "Create PDF portfolios from image collections.",
     ],
     faqs: [
-      { q: "Is PDF to image conversion free?", a: "Yes — 3 free daily uses for this standard tool, then 1 credit per conversion." },
+      { q: "Is PDF to image conversion free?", a: "Yes — PDF to image and image to PDF conversion is completely free and unlimited on Designora. No credits needed." },
       { q: "What quality are the converted images?", a: "Pages are rendered at 2x resolution for crisp, high-quality PNG output." },
       { q: "Can I convert multi-page PDFs?", a: "Yes — each page of your PDF is converted to a separate PNG image." },
       { q: "Are my files uploaded to a server?", a: "No — all PDF processing happens locally in your browser using pdf.js." },
