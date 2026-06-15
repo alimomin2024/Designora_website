@@ -68,7 +68,7 @@ function kMeansColors(imageData: ImageData, k = 6, iterations = 20): ColorInfo[]
 }
 
 export default function PalettePage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -141,7 +141,7 @@ export default function PalettePage() {
               <p className="text-sm text-muted-foreground">Extract dominant colors from any image</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

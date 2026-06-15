@@ -191,7 +191,3 @@ export async function redeemCoupon(uid: string, couponCode: string) {
   };
 }
 
-export function getDailyFreeRemaining(userDoc: UserDoc): number {
-  if (!userDoc) return 0;
-  return 0;
-}

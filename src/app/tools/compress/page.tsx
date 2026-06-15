@@ -9,7 +9,7 @@ import UsageBadge from "@/components/UsageBadge";
 import { useUsage } from "@/hooks/useUsage";
 
 export default function CompressPage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -95,7 +95,7 @@ export default function CompressPage() {
               <p className="text-sm text-muted-foreground">Reduce file size with quality control</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

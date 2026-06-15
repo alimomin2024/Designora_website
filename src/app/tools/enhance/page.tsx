@@ -56,7 +56,7 @@ function autoEnhance(canvas: HTMLCanvasElement): HTMLCanvasElement {
 }
 
 export default function EnhancePage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -127,7 +127,7 @@ export default function EnhancePage() {
               <p className="text-sm text-muted-foreground">Auto brightness, contrast, and color boost</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

@@ -12,7 +12,7 @@ import { useUsage } from "@/hooks/useUsage";
 import { resizeImage, getImageDimensions } from "@/lib/image-tools/resize";
 
 export default function ResizePage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -109,7 +109,7 @@ export default function ResizePage() {
               <p className="text-sm text-muted-foreground">Resize to any dimensions</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

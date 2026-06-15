@@ -10,7 +10,7 @@ import { useUsage } from "@/hooks/useUsage";
 type Mode = "pdf-to-image" | "image-to-pdf";
 
 export default function PdfPage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [mode, setMode] = useState<Mode>("pdf-to-image");
   const [pdfFile, setPdfFile] = useState<File | null>(null);
@@ -140,7 +140,7 @@ export default function PdfPage() {
               <p className="text-sm text-muted-foreground">Convert PDF to images or images to PDF</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         <div className="mb-6 flex gap-3">

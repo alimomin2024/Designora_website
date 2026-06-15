@@ -135,7 +135,7 @@ const webAppSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Designora",
-  url: "https://www.designoraa.in",
+  url: "https://designoraa.in",
   applicationCategory: "MultimediaApplication",
   operatingSystem: "Web",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },

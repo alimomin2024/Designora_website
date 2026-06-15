@@ -129,7 +129,7 @@ const tools = [
 
 export default function DashboardPage() {
   const { user, loading: authLoading } = useAuth();
-  const { loading: usageLoading, credits, dailyFreeRemaining } = useUsage();
+  const { loading: usageLoading, credits } = useUsage();
   const router = useRouter();
 
   useEffect(() => {
@@ -168,7 +168,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+            <UsageBadge credits={credits} />
             <Link href="/pricing">
               <Button className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90 glow">
                 <Coins className="h-4 w-4" /> Buy Credits

@@ -14,7 +14,7 @@ import { useUsage } from "@/hooks/useUsage";
 export default function BackgroundRemovalPage() {
   const router = useRouter();
   const { user } = useAuth();
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -84,7 +84,7 @@ export default function BackgroundRemovalPage() {
               </p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

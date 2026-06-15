@@ -10,7 +10,7 @@ import UsageBadge from "@/components/UsageBadge";
 import { useUsage } from "@/hooks/useUsage";
 
 export default function BatchResizePage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [files, setFiles] = useState<File[]>([]);
   const [widthInput, setWidthInput] = useState("800");
@@ -92,7 +92,7 @@ export default function BatchResizePage() {
               <p className="text-sm text-muted-foreground">Resize multiple images at once</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {files.length === 0 ? (

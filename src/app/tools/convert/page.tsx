@@ -15,7 +15,7 @@ const FORMATS = [
 ];
 
 export default function ConvertPage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -88,7 +88,7 @@ export default function ConvertPage() {
               <p className="text-sm text-muted-foreground">Convert between PNG, JPG, WEBP</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

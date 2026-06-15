@@ -35,17 +35,30 @@ export default async function BlogPostPage({ params }: Props) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designoraa.in";
+  const articleUrl = `${siteUrl}/blog/${post.slug}`;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.metaDescription,
+    url: articleUrl,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "Designora" },
-    publisher: { "@type": "Organization", name: "Designora", url: "https://www.designoraa.in" },
+    dateModified: post.date,
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+    image: `${siteUrl}/logo.svg`,
+    author: { "@type": "Organization", name: "Designora", url: siteUrl },
+    publisher: {
+      "@type": "Organization",
+      name: "Designora",
+      url: siteUrl,
+      logo: { "@type": "ImageObject", url: `${siteUrl}/logo.svg` },
+    },
   };
 
-  const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const sameToolPosts = blogPosts.filter((p) => p.slug !== slug && p.toolLink === post.toolLink);
+  const otherPosts = blogPosts.filter((p) => p.slug !== slug && p.toolLink !== post.toolLink);
+  const related = [...sameToolPosts, ...otherPosts].slice(0, 3);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">

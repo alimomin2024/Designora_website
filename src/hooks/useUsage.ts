@@ -7,7 +7,6 @@ import {
   canUse,
   deductCredits,
   getToolCost,
-  getDailyFreeRemaining,
   type ToolName,
   type UserDoc,
 } from "@/lib/firestore";
@@ -42,23 +41,10 @@ export function useUsage() {
       const cost = getToolCost(tool, tier);
       if (cost === 0) return true;
       if (!user) return false;
-      const today = new Date().toISOString().slice(0, 10);
-
-      const applyLocalUsage = (useFree: boolean) => {
+      const applyLocalUsage = () => {
         setUserDoc((prev) => {
           if (!prev) return prev;
-          if (useFree) {
-            const sameDay = prev.dailyFreeDate === today;
-            return {
-              ...prev,
-              dailyFreeDate: today,
-              dailyFreeUsed: sameDay ? prev.dailyFreeUsed + 1 : 1,
-            };
-          }
-          return {
-            ...prev,
-            credits: Math.max(0, prev.credits - cost),
-          };
+          return { ...prev, credits: Math.max(0, prev.credits - cost) };
         });
       };
 
@@ -68,14 +54,12 @@ export function useUsage() {
         try {
           const ok = await deductCredits(user.uid, tool, tier);
           if (ok) {
-            applyLocalUsage(check.useFree);
+            applyLocalUsage();
             await refresh();
           }
           return ok;
         } catch {
-          // If usage is allowed but write fails (strict client rules/legacy docs),
-          // don't block the tool action with an incorrect pricing redirect.
-          applyLocalUsage(check.useFree);
+          applyLocalUsage();
           return true;
         }
       } catch {
@@ -85,7 +69,6 @@ export function useUsage() {
     [user, refresh],
   );
 
-  const dailyFreeRemaining = userDoc ? getDailyFreeRemaining(userDoc) : 0;
   const credits = userDoc?.credits ?? 0;
 
   return {
@@ -94,6 +77,5 @@ export function useUsage() {
     deduct,
     refresh,
     credits,
-    dailyFreeRemaining,
   };
 }

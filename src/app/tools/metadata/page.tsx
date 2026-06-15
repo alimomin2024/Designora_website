@@ -18,7 +18,7 @@ interface MetadataInfo {
 }
 
 export default function MetadataPage() {
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -113,7 +113,7 @@ export default function MetadataPage() {
               <p className="text-sm text-muted-foreground">View image info and set DPI for print</p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (

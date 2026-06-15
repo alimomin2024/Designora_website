@@ -21,7 +21,7 @@ const TIERS = [
 export default function UpscalePage() {
   const router = useRouter();
   const { user } = useAuth();
-  const { deduct, credits, dailyFreeRemaining } = useUsage();
+  const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -90,7 +90,7 @@ export default function UpscalePage() {
               </p>
             </div>
           </div>
-          <UsageBadge credits={credits} dailyFreeRemaining={dailyFreeRemaining} />
+          <UsageBadge credits={credits} />
         </div>
 
         {!file ? (
