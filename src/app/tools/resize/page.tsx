@@ -105,7 +105,7 @@ export default function ResizePage() {
               <Maximize className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Image Resize</h1>
+              <h1 className="text-2xl font-bold">Resize Image Online</h1>
               <p className="text-sm text-muted-foreground">Resize to any dimensions</p>
             </div>
           </div>

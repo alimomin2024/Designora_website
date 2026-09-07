@@ -88,7 +88,7 @@ export default function BatchResizePage() {
               <Layers className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Batch Resize</h1>
+              <h1 className="text-2xl font-bold">Batch Resize Images Online</h1>
               <p className="text-sm text-muted-foreground">Resize multiple images at once</p>
             </div>
           </div>

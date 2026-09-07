@@ -102,7 +102,6 @@ export async function getUserDoc(uid: string): Promise<UserDoc | null> {
 
 export function getToolCost(tool: ToolName, tier?: string): number {
   if (tool === "upscale") {
-    if (tier === "4k-600dpi") return 4;
     if (tier === "4k") return 2;
     return 1;
   }

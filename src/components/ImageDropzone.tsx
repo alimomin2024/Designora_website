@@ -21,7 +21,7 @@ export default function ImageDropzone({
       e.preventDefault();
       setDragging(false);
       const file = e.dataTransfer.files[0];
-      if (file && file.type.startsWith("image/")) onFile(file);
+      if (file && (file.type.startsWith("image/") || /\.(heic|heif)$/i.test(file.name))) onFile(file);
     },
     [onFile],
   );

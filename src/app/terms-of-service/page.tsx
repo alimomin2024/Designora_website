@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Designora",
-  description: "Terms of service for Designora image tools and services.",
+  title: "Terms of Service",
+  description: "Read the terms that apply to Designora's online image tools, accounts, credits, and services.",
+  alternates: { canonical: "/terms-of-service" },
+  openGraph: {
+    title: "Terms of Service | Designora",
+    description: "Read the terms that apply to Designora's online image tools, accounts, credits, and services.",
+    url: "/terms-of-service",
+    type: "website",
+  },
 };
 
 export default function TermsOfServicePage() {

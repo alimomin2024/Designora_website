@@ -21,7 +21,6 @@ const TOOL_COSTS = [
   { tool: "Image Resize", cost: "Free (unlimited)" },
   { tool: "Image Upscaler (2K)", cost: "1 credit" },
   { tool: "Image Upscaler (4K)", cost: "2 credits" },
-  { tool: "Image Upscaler (4K 600 DPI)", cost: "4 credits" },
   { tool: "Background Removal", cost: "4 credits" },
   { tool: "Watermark Removal", cost: "4 credits" },
   { tool: "All non-AI tools", cost: "Free (unlimited)" },
@@ -67,9 +66,13 @@ export default function PricingContent() {
 
   useEffect(() => {
     const orderId = searchParams.get("order_id");
-    if (orderId && user) {
-      verifyOrder(orderId);
-    }
+    if (!orderId || !user) return;
+
+    const verification = window.setTimeout(() => {
+      void verifyOrder(orderId);
+    }, 0);
+
+    return () => window.clearTimeout(verification);
   }, [searchParams, user, verifyOrder]);
 
   async function handleBuy(pack: (typeof CREDIT_PACKS)[number]) {
@@ -150,26 +153,13 @@ export default function PricingContent() {
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/6 blur-[120px]" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-12"
-      >
-        <h1 className="text-4xl font-bold sm:text-5xl">
-          Simple, honest <span className="gradient-text">pricing</span>
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Non-AI tools are free and unlimited. AI tools use credits only.
-        </p>
-        {user && (
-          <div className="mt-4 flex items-center justify-center gap-4 text-sm">
-            <span className="flex items-center gap-1 text-primary">
-              <Coins className="h-4 w-4" /> {credits} credits
-            </span>
-          </div>
-        )}
-      </motion.div>
+      {user && (
+        <div className="mb-12 flex items-center justify-center gap-4 text-sm">
+          <span className="flex items-center gap-1 text-primary">
+            <Coins className="h-4 w-4" /> {credits} credits
+          </span>
+        </div>
+      )}
 
       {verifying && (
         <div className="mb-8 flex items-center justify-center gap-3 rounded-2xl bg-primary/10 p-4 text-primary">

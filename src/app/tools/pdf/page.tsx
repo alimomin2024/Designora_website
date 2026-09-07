@@ -136,7 +136,7 @@ export default function PdfPage() {
               <FileImage className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">PDF ↔ Image</h1>
+              <h1 className="text-2xl font-bold">PDF to Image and Image to PDF Converter</h1>
               <p className="text-sm text-muted-foreground">Convert PDF to images or images to PDF</p>
             </div>
           </div>

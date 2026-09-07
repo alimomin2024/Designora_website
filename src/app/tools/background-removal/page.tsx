@@ -78,7 +78,7 @@ export default function BackgroundRemovalPage() {
               <Eraser className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Background Removal</h1>
+              <h1 className="text-2xl font-bold">Remove Background from Image Online</h1>
               <p className="text-sm text-muted-foreground">
                 AI-powered one-click background removal
               </p>

@@ -16,8 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designoraa.in";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://designoraa.in"),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: "/logo.svg",
     shortcut: "/logo.svg",
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Designora",
   },
   description:
-    "Free AI image tools to upscale images, remove backgrounds, erase watermarks, compress, convert, and resize online.",
+    "Free online image tools to upscale, crop, rotate, resize, compress, convert HEIC photos, and prepare images for social media.",
   keywords: [
     "ai image tools",
     "image upscaler ai free",
@@ -44,7 +46,14 @@ export const metadata: Metadata = {
     "image to pdf converter",
     "pdf to image converter",
     "resize image online",
+    "crop image online",
+    "rotate image online",
     "batch image resizer",
+    "social media image resizer",
+    "instagram image size",
+    "facebook image size",
+    "heic to jpg converter",
+    "heif to jpg converter",
     "color palette from image",
     "image dpi editor",
     "ai image enhancer",
@@ -61,12 +70,21 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Designora",
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Designora free online image tools",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Designora - Free AI Image Tools Online",
     description:
       "Upscale images, remove backgrounds, erase watermarks, and optimize visuals with AI.",
+    images: ["/og-image.svg"],
   },
 };
 
@@ -77,6 +95,25 @@ const adsenseClient = (() => {
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID || "";
 const adProvider = (process.env.NEXT_PUBLIC_AD_PROVIDER || "adsense").toLowerCase();
+
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Designora",
+      url: siteUrl,
+      logo: `${siteUrl}/logo.svg`,
+    },
+    {
+      "@type": "WebSite",
+      name: "Designora",
+      url: siteUrl,
+      description: "Free online image tools for resizing, compression, conversion, and AI enhancement.",
+      publisher: { "@type": "Organization", name: "Designora", url: siteUrl },
+    },
+  ],
+};
 
 export default function RootLayout({
   children,
@@ -101,6 +138,10 @@ export default function RootLayout({
         ) : null}
       </head>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
         {gaId ? (
           <>
             <Script

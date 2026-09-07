@@ -17,13 +17,10 @@ import { ensureUserDoc } from "@/lib/firestore";
 
 export default function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!isConfigured);
 
   useEffect(() => {
-    if (!isConfigured) {
-      setLoading(false);
-      return;
-    }
+    if (!isConfigured) return;
     const auth = getAuthInstance();
     const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u);

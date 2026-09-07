@@ -1,27 +1,28 @@
 export const toolSeoData = {
   upscale: {
     toolName: "upscale",
-    headline: "Free AI Image Upscaler — Convert Images to 4K Resolution Online",
+    headline: "Convert Image to 4K Online with AI — 2× or 4× Image Upscaler",
     description:
-      "Designora's AI image upscaler uses Real-ESRGAN deep learning to enlarge photos up to 4x while preserving sharpness and detail. Convert any image to 4K resolution online — upload a low-resolution photo and get a crisp, high-quality 4K version in seconds. No software to install, works directly in your browser. Perfect for making images 4K for ecommerce, printing, social media, and old photo restoration. The best free 4K photo editor available online.",
+      "Convert a photo or image into a larger 4K-ready result online with AI. Upload JPG, PNG, or WEBP files, choose 2× or 4× scaling, review the resulting pixel dimensions, and download a high-resolution PNG. The output preserves your aspect ratio and may reach 3840×2160 when your source dimensions and selected factor allow it. AI processing uses pay-as-you-go credits.",
     steps: [
-      "Upload your image (PNG, JPG, or WEBP up to 20 MB).",
-      "Select your upscale tier: 2K, 4K, or 4K with 600 DPI for print.",
-      "Click Upscale and wait a few seconds for AI processing.",
-      "Download your enhanced high-resolution image.",
+      "Upload a PNG, JPG, or WEBP image up to 20 MB.",
+      "Choose 2× or 4× scaling based on the target pixel dimensions you need.",
+      "Check the displayed output dimensions before starting AI processing.",
+      "Compare the result and download the high-resolution PNG.",
     ],
     useCases: [
-      "Enlarge product photos for ecommerce listings on Amazon, Etsy, or Shopify.",
-      "Upscale old family photos to modern resolution for printing.",
-      "Enhance artwork and illustrations for high-DPI displays.",
-      "Improve social media images for Instagram, Pinterest, and Facebook.",
-      "Prepare images for large-format prints and posters.",
+      "Convert a photo to a larger, 4K-ready image for compatible displays.",
+      "Prepare product images for ecommerce zoom and high-resolution listings.",
+      "Create larger source files for presentations, portfolios, and social media.",
+      "Enlarge old photos, illustrations, and artwork while preserving aspect ratio.",
+      "Produce a larger source image before setting print DPI in a dedicated metadata editor.",
     ],
     faqs: [
-      { q: "Is the AI image upscaler free?", a: "All non-AI tools on Designora are free and unlimited. AI upscaling uses affordable credits starting at just 1 credit per use." },
-      { q: "What is the maximum upscale factor?", a: "You can upscale images up to 4x their original resolution, producing 4K quality output with optional 600 DPI for print." },
-      { q: "Does upscaling reduce image quality?", a: "No — Real-ESRGAN AI adds realistic detail and sharpness during upscaling, unlike simple interpolation which causes blur." },
-      { q: "What image formats are supported?", a: "PNG, JPG, and WEBP images up to 20 MB." },
+      { q: "Can I convert an image to 4K online?", a: "Yes, when the source dimensions and selected 2× or 4× factor produce the target size you need. Designora preserves aspect ratio and does not force every image to exactly 3840×2160." },
+      { q: "Is the AI image upscaler free?", a: "Browsing the tool is free. AI upscaling uses credits: 1 credit for 2× and 2 credits for 4×. Designora's non-AI tools are free and unlimited." },
+      { q: "What output size will I receive?", a: "Designora enlarges the original pixel dimensions by 2× or 4×. A 1920×1080 image reaches 3840×2160 with 2× scaling; the final size depends on your input and selected factor." },
+      { q: "Is this a general photo enhancer?", a: "This tool enhances resolution by creating a larger image. For brightness, contrast, and sharpness adjustments without changing pixel dimensions, use the separate AI Image Enhancer." },
+      { q: "What image formats are supported?", a: "PNG, JPG, and WEBP images up to 20 MB are supported. Results are delivered as PNG files." },
     ],
   },
 
@@ -285,6 +286,81 @@ export const toolSeoData = {
       { q: "What does the AI enhancer do?", a: "It automatically adjusts brightness, contrast, and sharpness using histogram analysis to produce a balanced, vibrant result." },
       { q: "Can I control the enhancement level?", a: "Currently the tool applies optimized auto-enhancement. Manual sliders may be added in a future update." },
       { q: "Does it work on all image types?", a: "Yes — photos, screenshots, artwork, and any JPG, PNG, or WEBP image can be enhanced." },
+    ],
+  },
+
+  "heic-to-jpg": {
+    toolName: "heic-to-jpg",
+    headline: "HEIC to JPG Converter Online — Convert HEIF Photos in Your Browser",
+    description:
+      "Convert HEIC and HEIF photos to JPG or PNG online with local browser processing. Designora helps turn iPhone photos into widely compatible image files without uploading them to a server.",
+    steps: [
+      "Choose a HEIC or HEIF photo up to 20 MB.",
+      "Wait while the photo is decoded locally in your browser.",
+      "Choose JPG or PNG as the output format.",
+      "Convert and download the compatible image file.",
+    ],
+    useCases: [
+      "Convert iPhone HEIC photos for Windows and older applications.",
+      "Prepare HEIF images for websites, email attachments, and document uploads.",
+      "Create PNG copies when you need a lossless image format.",
+      "Convert private photos locally without sending them to a conversion server.",
+    ],
+    faqs: [
+      { q: "Is the HEIC converter free?", a: "Yes. HEIC and HEIF conversion is free to use in your browser and does not require a subscription." },
+      { q: "Can I convert HEIC to JPG and PNG?", a: "Yes. Choose JPG for broad compatibility or PNG when you prefer a lossless output format." },
+      { q: "Are my iPhone photos uploaded?", a: "No. The conversion is performed locally in your browser. Your photo is not sent to Designora's servers." },
+      { q: "What is the maximum file size?", a: "The browser tool accepts HEIC and HEIF files up to 20 MB." },
+    ],
+  },
+
+  "crop-rotate": {
+    toolName: "crop-rotate",
+    headline: "Crop and Rotate Image Online — Edit JPG, PNG, and WEBP Files",
+    description:
+      "Crop and rotate images online with exact pixel coordinates. Set a precise crop box, rotate in 90-degree increments, and download a JPG or PNG while processing stays in your browser.",
+    steps: [
+      "Upload a JPG, PNG, or WEBP image.",
+      "Enter the left, top, width, and height of the crop area in pixels.",
+      "Rotate the image left or right in 90-degree increments if needed.",
+      "Choose PNG or JPG and download the cropped image.",
+    ],
+    useCases: [
+      "Crop profile photos, product photos, and website images to exact dimensions.",
+      "Straighten image orientation by rotating photos in 90-degree steps.",
+      "Remove unwanted edges before posting images to social platforms.",
+      "Prepare consistent image areas for ecommerce listings and presentations.",
+    ],
+    faqs: [
+      { q: "Is online cropping free?", a: "Yes. Cropping and rotating are free, and the image is processed locally in your browser." },
+      { q: "Can I crop to exact pixel dimensions?", a: "Yes. Enter the crop area's left and top coordinates plus its width and height in original image pixels." },
+      { q: "Which formats are supported?", a: "The tool accepts common JPG, PNG, and WEBP images and exports PNG or JPG." },
+      { q: "Does rotating change the image dimensions?", a: "A 90- or 270-degree rotation swaps the output width and height of the selected crop area." },
+    ],
+  },
+
+  "social-media-image-size": {
+    toolName: "social-media-image-size",
+    headline: "Social Media Image Resizer — Instagram, Facebook, YouTube, and More",
+    description:
+      "Resize and crop images for Instagram, Facebook, TikTok, YouTube, Pinterest, X, and LinkedIn using practical pixel presets. Choose cover crop or fit with padding and download a ready-to-post JPG or PNG locally.",
+    steps: [
+      "Upload a JPG, PNG, or WEBP image.",
+      "Choose a social platform preset or enter custom pixel dimensions.",
+      "Select cover crop to fill the frame or fit with padding to preserve the full image.",
+      "Choose JPG or PNG and download the resized image.",
+    ],
+    useCases: [
+      "Create square, portrait, Story, and Reels images for Instagram.",
+      "Prepare Facebook, X, LinkedIn, and Pinterest posts at useful pixel sizes.",
+      "Make YouTube thumbnails and TikTok images without stretching the source photo.",
+      "Standardize branded social media assets for a content calendar.",
+    ],
+    faqs: [
+      { q: "What social media sizes are included?", a: "Presets include Instagram, Facebook, X, LinkedIn, YouTube, Pinterest, and TikTok image dimensions." },
+      { q: "What is the difference between cover crop and fit with padding?", a: "Cover crop fills the target frame and trims overflow. Fit with padding keeps the complete image and adds a white background where aspect ratios differ." },
+      { q: "Can I enter a custom social media size?", a: "Yes. Select custom dimensions and enter the target width and height in pixels." },
+      { q: "Is this social media resizer private?", a: "Yes. Resizing happens locally in your browser, so your image is not uploaded to a processing server." },
     ],
   },
 } as const;

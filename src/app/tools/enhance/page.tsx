@@ -123,7 +123,7 @@ export default function EnhancePage() {
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">AI Image Enhancer</h1>
+              <h1 className="text-2xl font-bold">AI Image Enhancer Online</h1>
               <p className="text-sm text-muted-foreground">Auto brightness, contrast, and color boost</p>
             </div>
           </div>

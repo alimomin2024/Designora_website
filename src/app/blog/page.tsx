@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Designora Blog — Free Image Editing Guides",
     description: "Step-by-step guides for image upscaling, background removal, compression, and more.",
+    images: ["/og-image.svg"],
   },
 };
 

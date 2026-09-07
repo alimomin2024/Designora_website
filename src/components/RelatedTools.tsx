@@ -1,6 +1,9 @@
 import Link from "next/link";
 
 const ALL_TOOLS = [
+  { slug: "heic-to-jpg", label: "HEIC to JPG Converter", short: "Convert HEIC and HEIF photos" },
+  { slug: "crop-rotate", label: "Crop and Rotate", short: "Crop and rotate images" },
+  { slug: "social-media-image-size", label: "Social Media Resizer", short: "Resize for social platforms" },
   { slug: "upscale", label: "AI Image Upscaler", short: "Upscale images to 2K & 4K" },
   { slug: "background-removal", label: "Background Remover", short: "Remove image backgrounds" },
   { slug: "watermark-removal", label: "Watermark Remover", short: "Erase watermarks with AI" },

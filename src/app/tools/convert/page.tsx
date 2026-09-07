@@ -84,7 +84,7 @@ export default function ConvertPage() {
               <RefreshCw className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Format Converter</h1>
+              <h1 className="text-2xl font-bold">PNG, JPG and WEBP Converter</h1>
               <p className="text-sm text-muted-foreground">Convert between PNG, JPG, WEBP</p>
             </div>
           </div>

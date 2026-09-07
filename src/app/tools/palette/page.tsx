@@ -26,7 +26,7 @@ function kMeansColors(imageData: ImageData, k = 6, iterations = 20): ColorInfo[]
   const step = Math.max(1, Math.floor(pixels.length / k));
   for (let i = 0; i < k; i++) centroids.push([...pixels[i * step] || pixels[0]]);
 
-  let assignments = new Array(pixels.length).fill(0);
+  const assignments = new Array(pixels.length).fill(0);
 
   for (let iter = 0; iter < iterations; iter++) {
     for (let p = 0; p < pixels.length; p++) {
@@ -137,7 +137,7 @@ export default function PalettePage() {
               <Palette className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Color Palette Extractor</h1>
+              <h1 className="text-2xl font-bold">Extract Color Palette from Image</h1>
               <p className="text-sm text-muted-foreground">Extract dominant colors from any image</p>
             </div>
           </div>

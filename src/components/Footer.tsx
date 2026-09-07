@@ -24,8 +24,11 @@ export default function Footer() {
               <li><Link href="/tools/background-removal" className="hover:text-primary transition-colors">Background Remover</Link></li>
               <li><Link href="/tools/watermark-removal" className="hover:text-primary transition-colors">Watermark Remover</Link></li>
               <li><Link href="/tools/resize" className="hover:text-primary transition-colors">Image Resizer</Link></li>
+              <li><Link href="/tools/crop-rotate" className="hover:text-primary transition-colors">Crop and Rotate</Link></li>
+              <li><Link href="/tools/social-media-image-size" className="hover:text-primary transition-colors">Social Media Resizer</Link></li>
               <li><Link href="/tools/compress" className="hover:text-primary transition-colors">Image Compressor</Link></li>
               <li><Link href="/tools/convert" className="hover:text-primary transition-colors">Format Converter</Link></li>
+              <li><Link href="/tools/heic-to-jpg" className="hover:text-primary transition-colors">HEIC to JPG</Link></li>
               <li><Link href="/tools/batch-resize" className="hover:text-primary transition-colors">Batch Resizer</Link></li>
               <li><Link href="/tools/palette" className="hover:text-primary transition-colors">Color Palette Extractor</Link></li>
               <li><Link href="/tools/metadata" className="hover:text-primary transition-colors">DPI Editor</Link></li>

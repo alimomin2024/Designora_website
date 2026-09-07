@@ -8,7 +8,6 @@ const RUNWARE_API = "https://api.runware.ai/v1";
 const TIER_CONFIG: Record<string, { scale: 2 | 4; format: string }> = {
   "2k": { scale: 2, format: "PNG" },
   "4k": { scale: 4, format: "PNG" },
-  "4k-600dpi": { scale: 4, format: "PNG" },
 };
 
 export async function POST(req: NextRequest) {

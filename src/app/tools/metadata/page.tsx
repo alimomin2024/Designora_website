@@ -109,7 +109,7 @@ export default function MetadataPage() {
               <FileText className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Metadata / DPI Editor</h1>
+              <h1 className="text-2xl font-bold">Change Image DPI Online</h1>
               <p className="text-sm text-muted-foreground">View image info and set DPI for print</p>
             </div>
           </div>
@@ -178,7 +178,7 @@ function setPngDpi(pngBytes: Uint8Array, dpi: number): Uint8Array {
   view.setUint32(12, ppm);
   pHYs[16] = 1;
 
-  let crc = crc32(pHYs.slice(4, 17));
+  const crc = crc32(pHYs.slice(4, 17));
   view.setUint32(17, crc);
 
   let ihdrEnd = 8;

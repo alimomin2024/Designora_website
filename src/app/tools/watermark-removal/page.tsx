@@ -187,7 +187,7 @@ export default function WatermarkRemovalPage() {
               <Droplets className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Watermark Removal</h1>
+              <h1 className="text-2xl font-bold">Remove Watermark from Image Online</h1>
               <p className="text-sm text-muted-foreground">
                 Paint over the watermark, then let AI fill it in
               </p>

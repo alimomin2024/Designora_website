@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.metaTitle,
       description: post.metaDescription,
       type: "article",
+      images: ["/og-image.svg"],
       publishedTime: post.date,
     },
   };
@@ -46,7 +47,7 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: post.date,
     dateModified: post.date,
     mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
-    image: `${siteUrl}/logo.svg`,
+    image: `${siteUrl}/og-image.svg`,
     author: { "@type": "Organization", name: "Designora", url: siteUrl },
     publisher: {
       "@type": "Organization",
@@ -64,7 +65,9 @@ export default async function BlogPostPage({ params }: Props) {
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c"),
+        }}
       />
 
       <div className="mb-8">
@@ -95,6 +98,18 @@ export default async function BlogPostPage({ params }: Props) {
           </span>
         </div>
       </header>
+
+      {post.toolLink === "/tools/upscale" ? (
+        <aside className="mb-8 rounded-2xl border border-primary/30 bg-primary/5 p-5" aria-label="Try the AI image upscaler">
+          <h2 className="text-base font-bold">Convert an image to a 4K-ready size</h2>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+            Use the AI Image Upscaler to create a 2× or 4× PNG, then check the output dimensions for your display or project.
+          </p>
+          <Link href="/tools/upscale" className="mt-3 inline-block text-sm font-semibold text-primary hover:underline">
+            Open the 4K Image Upscaler →
+          </Link>
+        </aside>
+      ) : null}
 
       <div className="prose-custom space-y-8">
         {post.sections.map((s, i) => (

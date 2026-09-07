@@ -91,7 +91,7 @@ export default function CompressPage() {
               <FileDown className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Image Compressor</h1>
+              <h1 className="text-2xl font-bold">Compress Image Online</h1>
               <p className="text-sm text-muted-foreground">Reduce file size with quality control</p>
             </div>
           </div>

@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Designora",
-  description: "Privacy policy for Designora image tools and services.",
+  title: "Privacy Policy",
+  description: "Learn how Designora handles accounts, image processing, payments, analytics, and personal data.",
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy | Designora",
+    description: "Learn how Designora handles accounts, image processing, payments, analytics, and personal data.",
+    url: "/privacy-policy",
+    type: "website",
+  },
 };
 
 export default function PrivacyPolicyPage() {

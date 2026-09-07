@@ -39,7 +39,7 @@ const tools = [
     icon: ArrowUpFromLine,
     title: "Image Upscaler",
     key: "upscale" as const,
-    desc: "AI-powered upscaling up to 4x with Real-ESRGAN.",
+    desc: "AI-powered upscaling up to 4× with high-resolution PNG output.",
     href: "/tools/upscale",
     gradient: "from-purple-500/20 to-pink-500/20",
     creditCost: 1,

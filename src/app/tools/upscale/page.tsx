@@ -8,19 +8,16 @@ import { Button } from "@/components/ui/button";
 import ImageDropzone from "@/components/ImageDropzone";
 import UsageBadge from "@/components/UsageBadge";
 import BeforeAfter from "@/components/BeforeAfter";
-import { useAuth } from "@/hooks/useAuth";
 import { useUsage } from "@/hooks/useUsage";
 import { getImageDimensions } from "@/lib/image-tools/resize";
 
 const TIERS = [
-  { id: "2k", label: "2K", scale: 2, dpi: 300, credits: 1 },
-  { id: "4k", label: "4K", scale: 4, dpi: 300, credits: 2 },
-  { id: "4k-600dpi", label: "4K + 600 DPI", scale: 4, dpi: 600, credits: 4 },
+  { id: "2k", label: "2×", scale: 2, credits: 1 },
+  { id: "4k", label: "4×", scale: 4, credits: 2 },
 ];
 
 export default function UpscalePage() {
   const router = useRouter();
-  const { user } = useAuth();
   const { deduct, credits } = useUsage();
 
   const [file, setFile] = useState<File | null>(null);
@@ -84,9 +81,9 @@ export default function UpscalePage() {
               <ArrowUpFromLine className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Image Upscaler</h1>
+              <h1 className="text-2xl font-bold">Convert Image to 4K Online with AI</h1>
               <p className="text-sm text-muted-foreground">
-                AI-powered upscaling with Real-ESRGAN
+                Upscale photos 2× or 4×, check the output dimensions, and download a high-resolution PNG.
               </p>
             </div>
           </div>
@@ -99,7 +96,7 @@ export default function UpscalePage() {
           <div className="space-y-6">
             <div className="glass rounded-2xl p-6">
               <div className="mb-4 flex flex-wrap items-center gap-3">
-                <span className="text-sm text-muted-foreground">Tier:</span>
+                <span className="text-sm text-muted-foreground">Upscale factor:</span>
                 {TIERS.map((t) => (
                   <button
                     key={t.id}
@@ -115,7 +112,7 @@ export default function UpscalePage() {
                 ))}
                 <span className="ml-auto text-xs text-muted-foreground">
                   {origDims.w}&times;{origDims.h} → {origDims.w * tier.scale}&times;
-                  {origDims.h * tier.scale} @ {tier.dpi} DPI
+                  {origDims.h * tier.scale} px
                 </span>
               </div>
 

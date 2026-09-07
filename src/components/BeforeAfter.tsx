@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 interface Props {
   before: string;
@@ -10,8 +10,21 @@ interface Props {
 
 export default function BeforeAfter({ before, after, alt = "Comparison" }: Props) {
   const [position, setPosition] = useState(50);
+  const [containerWidth, setContainerWidth] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new ResizeObserver(([entry]) => {
+      setContainerWidth(entry.contentRect.width);
+    });
+    observer.observe(container);
+
+    return () => observer.disconnect();
+  }, []);
 
   const updatePosition = useCallback((clientX: number) => {
     if (!containerRef.current) return;
@@ -64,7 +77,7 @@ export default function BeforeAfter({ before, after, alt = "Comparison" }: Props
           src={before}
           alt={`${alt} before`}
           className="block h-full w-auto max-w-none"
-          style={{ width: `${containerRef.current?.offsetWidth ?? 9999}px` }}
+          style={{ width: `${containerWidth ?? 9999}px` }}
           draggable={false}
         />
       </div>

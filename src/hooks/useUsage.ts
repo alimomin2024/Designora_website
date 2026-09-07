@@ -33,7 +33,11 @@ export function useUsage() {
   }, [user]);
 
   useEffect(() => {
-    refresh();
+    const refreshTimer = window.setTimeout(() => {
+      void refresh();
+    }, 0);
+
+    return () => window.clearTimeout(refreshTimer);
   }, [refresh]);
 
   const deduct = useCallback(
