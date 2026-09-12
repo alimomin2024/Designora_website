@@ -483,4 +483,155 @@ export const toolSeoData = {
       { q: "Is my image uploaded to a server?", a: "No, the unblur filter runs directly inside your browser on your device." },
     ],
   },
+
+  "png-to-jpg": {
+    toolName: "png-to-jpg",
+    headline: "PNG to JPG Converter Free Online — Fast & Private Image Converter",
+    description:
+      "Convert PNG to JPG online for free. Turn transparent or opaque PNG graphics into lightweight, high-compatibility JPG photos in your browser. Control output quality and shrink file size with zero server uploads.",
+    steps: [
+      "Upload your PNG image.",
+      "Adjust output JPG quality using the quality slider.",
+      "Preview the converted JPEG and file size reduction.",
+      "Download your converted JPG image.",
+    ],
+    useCases: [
+      "Convert large PNG screenshots to lightweight JPGs for email and websites.",
+      "Comply with portals and upload forms that only accept JPG/JPEG formats.",
+      "Reduce photo storage on mobile devices and laptops.",
+      "Prepare transparent graphics with solid white background for printing.",
+    ],
+    faqs: [
+      { q: "What happens to PNG transparent areas?", a: "JPG does not support transparency, so Designora cleanly fills transparent areas with a neutral solid white background." },
+      { q: "Is PNG to JPG conversion free?", a: "Yes, 100% free and unlimited with zero sign-up required." },
+    ],
+  },
+
+  "jpg-to-png": {
+    toolName: "jpg-to-png",
+    headline: "JPG to PNG Converter Free Online — Lossless Image Converter",
+    description:
+      "Convert JPG to PNG online for free. Convert JPEG images into lossless PNG format directly in your browser. Maintain crisp details with zero compression artifacts and no server uploads.",
+    steps: [
+      "Upload your JPG or JPEG image.",
+      "The tool decodes and converts to lossless PNG format in your browser.",
+      "Preview the converted PNG file.",
+      "Download your high-resolution PNG image.",
+    ],
+    useCases: [
+      "Convert JPG artwork or icons to PNG for lossless graphic design work.",
+      "Prevent repeated quality degradation when re-saving images.",
+      "Prepare assets for Canva, Figma, and web design workflows.",
+    ],
+    faqs: [
+      { q: "Does converting JPG to PNG improve quality?", a: "It does not restore detail already lost to JPEG compression, but it prevents any further quality loss during editing and saving." },
+      { q: "Are my files uploaded to a server?", a: "No, all conversion happens locally in your browser for complete privacy." },
+    ],
+  },
+
+  "webp-to-jpg": {
+    toolName: "webp-to-jpg",
+    headline: "WEBP to JPG Converter Free Online — Convert WEBP to JPEG Instantly",
+    description:
+      "Convert WEBP images to widely compatible JPG photos online for free. Turn downloaded web images into standard JPEG format for easy viewing on Windows, Mac, Photoshop, and mobile devices.",
+    steps: [
+      "Upload your WEBP image.",
+      "Select desired JPEG quality.",
+      "Preview the converted JPG output.",
+      "Download your compatible JPG file.",
+    ],
+    useCases: [
+      "Open WEBP web images in legacy image editing software that does not support WEBP.",
+      "Upload downloaded website graphics to social media platforms.",
+      "Easily view and share images across all operating systems.",
+    ],
+    faqs: [
+      { q: "Why convert WEBP to JPG?", a: "While WEBP is great for websites, many desktop programs, printers, and older devices only accept standard JPG files." },
+    ],
+  },
+
+  "jpg-to-pdf": {
+    toolName: "jpg-to-pdf",
+    headline: "JPG to PDF Converter Free Online — Convert Image to PDF Document",
+    description:
+      "Convert JPG, PNG, and WEBP images into clean, professional PDF documents online for free. Combine multiple photos into a single multi-page PDF file in your browser with zero server uploads.",
+    steps: [
+      "Select one or more JPG, PNG, or WEBP images.",
+      "Choose page layout: Fit to Image dimensions or Standard A4.",
+      "Click Convert to PDF Document.",
+      "Download your combined multi-page PDF file.",
+    ],
+    useCases: [
+      "Combine receipts, contracts, and scanned forms into a single PDF document.",
+      "Create digital photo portfolios and product catalogs.",
+      "Submit school, college, and visa document requirements.",
+    ],
+    faqs: [
+      { q: "How many images can I combine into a PDF?", a: "You can combine multiple photos at once with no limits since processing happens locally on your device." },
+      { q: "Is it safe to convert confidential documents?", a: "Yes. All PDF rendering occurs 100% locally in your browser. Your files never leave your computer." },
+    ],
+  },
+
+  "pdf-to-jpg": {
+    toolName: "pdf-to-jpg",
+    headline: "PDF to JPG Converter Free Online — Extract PDF Pages to JPG",
+    description:
+      "Convert PDF documents into high-resolution JPG images online for free. Extract individual pages or entire documents as sharp JPEG photos directly in your browser with no upload limits.",
+    steps: [
+      "Upload your PDF document.",
+      "Our in-browser engine renders each page at high 2× resolution.",
+      "Preview each converted page image.",
+      "Download individual JPG page images instantly.",
+    ],
+    useCases: [
+      "Extract slides from PDF presentations for social media sharing.",
+      "Convert PDF certificates and diplomas into image files.",
+      "Share PDF page excerpts in chat applications and email.",
+    ],
+    faqs: [
+      { q: "What is the resolution of the extracted JPG pages?", a: "Designora renders PDF pages at 2× resolution for crisp, readable text and clear graphics." },
+    ],
+  },
+
+  "circle-crop": {
+    toolName: "circle-crop",
+    headline: "Circle Crop Image Online Free — Round Photo Maker & Avatar Cropper",
+    description:
+      "Crop images into a circle online for free. Create circular profile pictures and avatars with transparent PNG backgrounds for LinkedIn, Discord, Instagram, WhatsApp, and Slack.",
+    steps: [
+      "Upload any photo (JPG, PNG, WEBP).",
+      "Use the zoom slider to frame your face or subject inside the circle.",
+      "Optionally add a clean circular border.",
+      "Download your round avatar with transparent background.",
+    ],
+    useCases: [
+      "Create professional circular profile pictures for LinkedIn and resumes.",
+      "Design custom Discord and gaming avatars.",
+      "Make round stickers, badges, and merchandise graphics.",
+    ],
+    faqs: [
+      { q: "Is the background around the circle transparent?", a: "Yes, Designora exports a lossless PNG with 100% transparent corners outside the circle." },
+    ],
+  },
+
+  "flip-image": {
+    toolName: "flip-image",
+    headline: "Flip Image Online Free — Mirror Image & Flip Photo Horizontally/Vertically",
+    description:
+      "Flip images online for free. Create horizontal mirror photos or flip images upside down vertically in your browser. Fast, lossless, and 100% private with no watermarks.",
+    steps: [
+      "Upload your image (PNG, JPG, WEBP).",
+      "Click Flip Horizontally for mirror reflection or Flip Vertically for upside down.",
+      "Optionally rotate 90 degrees.",
+      "Download your flipped image instantly.",
+    ],
+    useCases: [
+      "Fix mirrored selfie camera photos.",
+      "Create creative reflection and symmetrical effects.",
+      "Correct upside-down scanned photos and documents.",
+    ],
+    faqs: [
+      { q: "Does flipping reduce image quality?", a: "No, flipping reorients pixels losslessly without re-compression degradation." },
+    ],
+  },
 } as const;

@@ -40,6 +40,13 @@ export default function Footer() {
               <li><Link href="/tools/compress-to-20kb" className="hover:text-primary transition-colors">Compress to 20KB</Link></li>
               <li><Link href="/tools/passport-photo-maker" className="hover:text-primary transition-colors">Passport Photo Maker</Link></li>
               <li><Link href="/tools/unblur-image" className="hover:text-primary transition-colors">Unblur Image</Link></li>
+              <li><Link href="/tools/jpg-to-pdf" className="hover:text-primary transition-colors">JPG to PDF</Link></li>
+              <li><Link href="/tools/pdf-to-jpg" className="hover:text-primary transition-colors">PDF to JPG</Link></li>
+              <li><Link href="/tools/png-to-jpg" className="hover:text-primary transition-colors">PNG to JPG</Link></li>
+              <li><Link href="/tools/jpg-to-png" className="hover:text-primary transition-colors">JPG to PNG</Link></li>
+              <li><Link href="/tools/webp-to-jpg" className="hover:text-primary transition-colors">WEBP to JPG</Link></li>
+              <li><Link href="/tools/circle-crop" className="hover:text-primary transition-colors">Circle Crop</Link></li>
+              <li><Link href="/tools/flip-image" className="hover:text-primary transition-colors">Flip Image</Link></li>
             </ul>
           </div>
 

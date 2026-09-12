@@ -19,6 +19,8 @@ import {
   Sparkles,
   Sliders,
   User,
+  FlipHorizontal,
+  Circle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AdSlot from "@/components/AdSlot";
@@ -164,6 +166,55 @@ const tools = [
     href: "/tools/unblur-image",
     gradient: "from-amber-500/20 to-yellow-500/20",
   },
+  {
+    icon: FileText,
+    title: "JPG to PDF",
+    desc: "Convert and combine JPG, PNG, and WEBP photos into a multi-page PDF document.",
+    href: "/tools/jpg-to-pdf",
+    gradient: "from-red-500/20 to-orange-500/20",
+  },
+  {
+    icon: FileImage,
+    title: "PDF to JPG",
+    desc: "Extract PDF pages into sharp, high-resolution JPEG images in your browser.",
+    href: "/tools/pdf-to-jpg",
+    gradient: "from-amber-500/20 to-orange-500/20",
+  },
+  {
+    icon: RefreshCw,
+    title: "PNG to JPG",
+    desc: "Convert PNG transparent or opaque graphics to lightweight JPG photos.",
+    href: "/tools/png-to-jpg",
+    gradient: "from-blue-500/20 to-indigo-500/20",
+  },
+  {
+    icon: RefreshCw,
+    title: "JPG to PNG",
+    desc: "Convert JPEG photos into lossless PNG format with zero compression loss.",
+    href: "/tools/jpg-to-png",
+    gradient: "from-indigo-500/20 to-purple-500/20",
+  },
+  {
+    icon: RefreshCw,
+    title: "WEBP to JPG",
+    desc: "Convert modern web WEBP images to universally compatible JPG files.",
+    href: "/tools/webp-to-jpg",
+    gradient: "from-cyan-500/20 to-blue-500/20",
+  },
+  {
+    icon: Circle,
+    title: "Circle Crop",
+    desc: "Crop photos into circular avatars with transparent PNG backgrounds.",
+    href: "/tools/circle-crop",
+    gradient: "from-pink-500/20 to-rose-500/20",
+  },
+  {
+    icon: FlipHorizontal,
+    title: "Flip Image",
+    desc: "Mirror images horizontally or flip photos upside down vertically.",
+    href: "/tools/flip-image",
+    gradient: "from-violet-500/20 to-purple-500/20",
+  },
 ];
 
 const fadeUp = {
@@ -179,7 +230,7 @@ const faqs = [
   { q: "Is this an image upscaler AI free tool?", a: "Yes — Designora offers a free AI image tool suite, and AI upscaling credits start at just 1 credit for 2K output." },
   { q: "How do I remove image background online?", a: "Upload any image to Designora's AI background remover. It automatically detects the subject and creates a clean transparent PNG cutout. No manual selection needed." },
   { q: "Can I remove watermarks from images?", a: "Yes — paint over the watermark area with the brush tool and the AI inpainting engine fills it in with natural content matching the surrounding image." },
-  { q: "What free online image tools are available?", a: "Designora includes 20 tools: image resize, crop and rotate, social media resizing, HEIC conversion, AI upscaling, background removal, watermark removal, image compression, format conversion, batch resize, color palette extraction, DPI editing, PDF conversion, and AI enhancement." },
+  { q: "What free online image tools are available?", a: "Designora includes 27 tools: image resize, crop and rotate, social media resizing, HEIC conversion, AI upscaling, background removal, watermark removal, image compression, format conversion, batch resize, color palette extraction, DPI editing, PDF conversion, and AI enhancement." },
   { q: "Is Designora safe to use? Are my images private?", a: "Most tools run entirely in your browser — images never leave your device. AI tools send data to secure servers for processing and immediately discard it after." },
   { q: "How much does it cost?", a: "Non-AI tools like resize, compress, convert, batch resize, palette, metadata, PDF, and enhance are free and unlimited. AI tools use credits at 1-4 credits each. Buy 100 credits for just $1 — no subscription required." },
   { q: "What image formats are supported?", a: "Most tools support PNG, JPG, and WEBP. The HEIC converter accepts HEIC and HEIF photos, and the PDF tool handles PDF files. Output formats vary by tool." },

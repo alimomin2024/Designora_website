@@ -95,6 +95,18 @@ const tools = [
     category: "Resize and optimize",
   },
   {
+    href: "/tools/circle-crop",
+    name: "Circle Crop Image",
+    description: "Crop photos into circular avatars with transparent PNG backgrounds.",
+    category: "Resize and optimize",
+  },
+  {
+    href: "/tools/flip-image",
+    name: "Flip Image",
+    description: "Mirror images horizontally or flip photos upside down vertically.",
+    category: "Resize and optimize",
+  },
+  {
     href: "/tools/convert",
     name: "PNG, JPG and WEBP Converter",
     description: "Convert between common image formats without uploading files to a server.",
@@ -104,6 +116,36 @@ const tools = [
     href: "/tools/heic-to-jpg",
     name: "HEIC to JPG Converter",
     description: "Convert HEIC and HEIF photos to JPG or PNG locally in your browser.",
+    category: "Convert and prepare",
+  },
+  {
+    href: "/tools/jpg-to-pdf",
+    name: "JPG to PDF Converter",
+    description: "Convert and combine JPG, PNG, and WEBP photos into a multi-page PDF document.",
+    category: "Convert and prepare",
+  },
+  {
+    href: "/tools/pdf-to-jpg",
+    name: "PDF to JPG Converter",
+    description: "Extract PDF pages into sharp, high-resolution JPEG images in your browser.",
+    category: "Convert and prepare",
+  },
+  {
+    href: "/tools/png-to-jpg",
+    name: "PNG to JPG Converter",
+    description: "Convert PNG transparent or opaque graphics to lightweight JPG photos.",
+    category: "Convert and prepare",
+  },
+  {
+    href: "/tools/jpg-to-png",
+    name: "JPG to PNG Converter",
+    description: "Convert JPEG photos into lossless PNG format with zero compression loss.",
+    category: "Convert and prepare",
+  },
+  {
+    href: "/tools/webp-to-jpg",
+    name: "WEBP to JPG Converter",
+    description: "Convert modern web WEBP images to universally compatible JPG files.",
     category: "Convert and prepare",
   },
   {

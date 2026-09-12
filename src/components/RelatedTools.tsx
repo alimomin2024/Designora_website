@@ -21,6 +21,13 @@ const ALL_TOOLS = [
   { slug: "compress-to-20kb", label: "Compress to 20KB", short: "Under 20KB signature reducer" },
   { slug: "passport-photo-maker", label: "Passport Photo Maker", short: "Official 2x2 & 35x45mm presets" },
   { slug: "unblur-image", label: "Unblur Image", short: "Fix blurry photos & sharpen" },
+  { slug: "jpg-to-pdf", label: "JPG to PDF", short: "Combine photos into PDF" },
+  { slug: "pdf-to-jpg", label: "PDF to JPG", short: "Extract pages to high-res JPG" },
+  { slug: "png-to-jpg", label: "PNG to JPG", short: "Convert PNG to JPG instantly" },
+  { slug: "jpg-to-png", label: "JPG to PNG", short: "Convert JPEG to lossless PNG" },
+  { slug: "webp-to-jpg", label: "WEBP to JPG", short: "Convert web images to JPG" },
+  { slug: "circle-crop", label: "Circle Crop", short: "Round avatar maker with transparent PNG" },
+  { slug: "flip-image", label: "Flip Image", short: "Mirror and invert photos" },
 ] as const;
 
 interface RelatedToolsProps {
