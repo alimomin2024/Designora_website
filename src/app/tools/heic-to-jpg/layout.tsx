@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "HEIC to JPG Converter Free Online — Convert iPhone Photos to JPG & PNG | Designora",
+  title: "HEIC to JPG Converter Free Online — Convert iPhone Photos to JPG & PNG ",
   description:
     "Convert HEIC to JPG online for free. Fast iPhone HEIC photo converter to JPG or PNG with 100% private local browser decoding. No upload to servers, no size limits.",
   alternates: { canonical: "/tools/heic-to-jpg" },

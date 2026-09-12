@@ -5,7 +5,7 @@ import UpscalingGuides from "@/components/UpscalingGuides";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "4K Photo Editor Online Free — AI Photo Editing & 4K Image Converter | Designora",
+  title: "4K Photo Editor Online Free — AI Photo Editing & 4K Image Converter ",
   description:
     "Free online 4K photo editor. Enhance photo resolution to 4K (3840×2160), edit image quality with AI, and download high-resolution photos without watermark.",
   alternates: { canonical: "/tools/4k-photo-editor" },

@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Photo Size Reducer & Image Resizer Online Free — Resize JPG, PNG, WEBP | Designora",
+  title: "Photo Size Reducer & Image Resizer Online Free — Resize JPG, PNG, WEBP ",
   description:
     "Free online photo size reducer and image resizer. Resize photos to exact pixel dimensions or reduce image sizes without uploading to servers. 100% private, works in your browser.",
   alternates: { canonical: "/tools/resize" },
