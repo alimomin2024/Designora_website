@@ -35,6 +35,11 @@ export default function Footer() {
               <li><Link href="/tools/metadata" className="hover:text-primary transition-colors">DPI Editor</Link></li>
               <li><Link href="/tools/pdf" className="hover:text-primary transition-colors">PDF to Image</Link></li>
               <li><Link href="/tools/enhance" className="hover:text-primary transition-colors">AI Image Enhancer</Link></li>
+              <li><Link href="/tools/compress-to-50kb" className="hover:text-primary transition-colors">Compress to 50KB</Link></li>
+              <li><Link href="/tools/compress-to-100kb" className="hover:text-primary transition-colors">Compress to 100KB</Link></li>
+              <li><Link href="/tools/compress-to-20kb" className="hover:text-primary transition-colors">Compress to 20KB</Link></li>
+              <li><Link href="/tools/passport-photo-maker" className="hover:text-primary transition-colors">Passport Photo Maker</Link></li>
+              <li><Link href="/tools/unblur-image" className="hover:text-primary transition-colors">Unblur Image</Link></li>
             </ul>
           </div>
 

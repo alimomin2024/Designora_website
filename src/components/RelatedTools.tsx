@@ -16,6 +16,11 @@ const ALL_TOOLS = [
   { slug: "metadata", label: "DPI & Metadata Editor", short: "Change DPI for print" },
   { slug: "pdf", label: "PDF ↔ Image", short: "PDF to PNG, image to PDF" },
   { slug: "enhance", label: "AI Image Enhancer", short: "Improve photo quality" },
+  { slug: "compress-to-50kb", label: "Compress to 50KB", short: "Under 50KB for exams & forms" },
+  { slug: "compress-to-100kb", label: "Compress to 100KB", short: "Under 100KB for resumes & docs" },
+  { slug: "compress-to-20kb", label: "Compress to 20KB", short: "Under 20KB signature reducer" },
+  { slug: "passport-photo-maker", label: "Passport Photo Maker", short: "Official 2x2 & 35x45mm presets" },
+  { slug: "unblur-image", label: "Unblur Image", short: "Fix blurry photos & sharpen" },
 ] as const;
 
 interface RelatedToolsProps {

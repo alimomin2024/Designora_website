@@ -363,4 +363,124 @@ export const toolSeoData = {
       { q: "Is this social media resizer private?", a: "Yes. Resizing happens locally in your browser, so your image is not uploaded to a processing server." },
     ],
   },
+
+  "compress-to-50kb": {
+    toolName: "compress-to-50kb",
+    headline: "Compress Image to 50KB Online Free — Reduce JPG PNG File Size",
+    description:
+      "Compress image to 50KB online for free. Reduce JPG, PNG, and WEBP file size to under 50KB without losing visible quality. Perfect for government forms, job applications, college admissions, SSC, UPSC, and visa portals. Fast, private, in-browser tool.",
+    steps: [
+      "Upload your image (JPG, PNG, or WEBP).",
+      "Select 50 KB target size.",
+      "Our in-browser compressor automatically optimizes quality to stay strictly under 50KB.",
+      "Preview and download your 50KB image.",
+    ],
+    useCases: [
+      "Government exam applications (UPSC, SSC, IBPS, Railways).",
+      "Online job portal document uploads.",
+      "College admissions and scholarship forms.",
+      "Visa and passport application portals.",
+      "Email attachments and web portals with strict 50KB limits.",
+    ],
+    faqs: [
+      { q: "How to compress image to 50KB without losing quality?", a: "Upload your image and Designora automatically calculates the maximum JPEG quality that fits strictly under 50KB while preserving sharp details." },
+      { q: "Is it safe to compress private photos?", a: "Yes. All processing runs 100% locally in your browser. Your images are never uploaded to any external server." },
+      { q: "Which image formats are supported?", a: "JPG, JPEG, PNG, and WEBP formats are all supported." },
+    ],
+  },
+
+  "compress-to-100kb": {
+    toolName: "compress-to-100kb",
+    headline: "Compress Image to 100KB Online Free — Fast JPG & PNG Compressor",
+    description:
+      "Compress image to 100KB online for free. Shrink JPG, PNG, and WEBP files to under 100KB while preserving maximum visual clarity. Ideal for resumes, legal documents, official registrations, and web uploads.",
+    steps: [
+      "Upload your JPG or PNG image.",
+      "Set the target size to 100 KB.",
+      "The tool compresses the image in your browser to fit strictly under 100KB.",
+      "Download the optimized image instantly.",
+    ],
+    useCases: [
+      "Resume and CV photo uploads.",
+      "Government and state portals requiring under 100KB.",
+      "Profile photos for company intranets and portals.",
+      "Websites and blog hero images for faster page load times.",
+    ],
+    faqs: [
+      { q: "Can I compress multiple images to 100KB?", a: "Yes, you can compress photos one after another with no limits or watermarks." },
+      { q: "Does it work on mobile phones?", a: "Yes, Designora runs seamlessly on iPhone, Android, tablets, and desktop browsers." },
+    ],
+  },
+
+  "compress-to-20kb": {
+    toolName: "compress-to-20kb",
+    headline: "Compress Image to 20KB Online Free — Signature & Photo Size Reducer",
+    description:
+      "Compress image to 20KB online for free. Reduce photo and signature sizes to under 20KB for competitive exam forms, banking portals, and official identity documents. Private, fast, and 100% free.",
+    steps: [
+      "Upload your photo or scanned signature.",
+      "Select 20 KB target size.",
+      "Our tool rescales and balances compression to fit under 20KB.",
+      "Download the clean signature or photo file.",
+    ],
+    useCases: [
+      "Online exam signature uploads (UPSC, GATE, NEET, JEE, SSC).",
+      "Passport and PAN card signature requirements.",
+      "Thumb impression photo uploads.",
+      "Tiny avatar and thumbnail requirements.",
+    ],
+    faqs: [
+      { q: "How to compress signature to 20KB?", a: "Upload your scanned signature JPG or PNG. The tool will adjust dimensions and quality to make sure it is under 20KB while remaining crisp and readable." },
+      { q: "Is this tool free?", a: "Yes, 100% free and unlimited with zero sign-up required." },
+    ],
+  },
+
+  "passport-photo-maker": {
+    toolName: "passport-photo-maker",
+    headline: "Passport Photo Maker Online Free — 2x2, 35x45mm & Govt Exam Presets",
+    description:
+      "Create official passport size photos online for free. Pre-configured aspect ratios and dimensions for Indian passport (3.5x4.5cm), US visa/passport (2x2 inch, 600x600px), Schengen visa (35x45mm), and PAN card. Choose solid white or blue background, single photo or 6-photo printable sheet, and compress under 50KB.",
+    steps: [
+      "Upload your photo (JPG, PNG, WEBP).",
+      "Select your country standard (US 2x2\", India 35x45mm, Schengen, PAN card).",
+      "Adjust crop and zoom to center your face.",
+      "Choose background color and download single photo or 6-photo print sheet.",
+    ],
+    useCases: [
+      "US Passport & Green Card / Visa applications (2x2 inch).",
+      "Indian Passport, OCI, SSC, UPSC, and government exams (3.5x4.5cm).",
+      "Schengen, UK, and European visa applications (35x45mm).",
+      "Printable 4x6 inch photo studio sheets with 6 copies.",
+      "Employee ID badges and student cards.",
+    ],
+    faqs: [
+      { q: "What is the standard passport photo size?", a: "US is 2x2 inches (51x51mm / 600x600px). India and Schengen countries use 3.5x4.5cm (35x45mm). Designora includes presets for all official standards." },
+      { q: "Can I print 6 photos on a single sheet?", a: "Yes, Designora generates a ready-to-print 4x6 inch sheet with 6 properly spaced passport photos." },
+      { q: "Can I make the file size under 50KB?", a: "Yes, the tool has an automatic size limiter to guarantee output fits strict government upload limits." },
+    ],
+  },
+
+  "unblur-image": {
+    toolName: "unblur-image",
+    headline: "Unblur Image Online Free — AI Photo Sharpener & Clarity Enhancer",
+    description:
+      "Unblur images online for free. Fix blurry photos, sharpen soft edges, and enhance clarity in seconds without installing software. Private, fast, in-browser tool.",
+    steps: [
+      "Upload your blurry or soft image.",
+      "Choose unblur strength (Mild, Medium, or Strong).",
+      "Preview before and after using the interactive comparison slider.",
+      "Download your sharp, unblurred image.",
+    ],
+    useCases: [
+      "Fix blurry portraits and family photos.",
+      "Sharpen low-resolution text and document scans.",
+      "Enhance motion-blurred action shots.",
+      "Improve product photos for ecommerce listings.",
+      "Restore old soft-focus memories.",
+    ],
+    faqs: [
+      { q: "How to unblur an image online for free?", a: "Upload your image to Designora\x27s Unblur tool. The smart sharpening algorithm increases local contrast and edge definition to remove blur instantly." },
+      { q: "Is my image uploaded to a server?", a: "No, the unblur filter runs directly inside your browser on your device." },
+    ],
+  },
 } as const;
