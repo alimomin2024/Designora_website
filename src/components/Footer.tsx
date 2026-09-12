@@ -21,6 +21,7 @@ export default function Footer() {
             <h4 className="mb-3 text-sm font-semibold text-foreground">Tools</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/tools/upscale" className="hover:text-primary transition-colors">AI Image Upscaler</Link></li>
+              <li><Link href="/tools/4k-photo-editor" className="hover:text-primary transition-colors">4K Photo Editor</Link></li>
               <li><Link href="/tools/background-removal" className="hover:text-primary transition-colors">Background Remover</Link></li>
               <li><Link href="/tools/watermark-removal" className="hover:text-primary transition-colors">Watermark Remover</Link></li>
               <li><Link href="/tools/resize" className="hover:text-primary transition-colors">Image Resizer</Link></li>

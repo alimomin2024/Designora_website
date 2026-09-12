@@ -4,13 +4,13 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "HEIC to JPG Converter Online — Convert HEIF to PNG",
+  title: "HEIC to JPG Converter Free Online — Convert iPhone Photos to JPG & PNG | Designora",
   description:
-    "Convert HEIC and HEIF photos to JPG or PNG in your browser. Private local processing and no account required.",
+    "Convert HEIC to JPG online for free. Fast iPhone HEIC photo converter to JPG or PNG with 100% private local browser decoding. No upload to servers, no size limits.",
   alternates: { canonical: "/tools/heic-to-jpg" },
   openGraph: {
-    title: "HEIC to JPG Converter Online | Designora",
-    description: "Convert iPhone HEIC and HEIF photos to JPG or PNG in your browser.",
+    title: "HEIC to JPG Converter Free Online | Designora",
+    description: "Convert iPhone HEIC and HEIF photos to JPG or PNG online. Fast, private local browser conversion.",
   },
 };
 

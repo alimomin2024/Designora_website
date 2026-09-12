@@ -4,13 +4,13 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Remove Background from Image Online — AI Background Remover",
+  title: "Remove Background from Image Free Online — AI Background Remover | Designora",
   description:
-    "Remove image backgrounds instantly with AI. Get clean transparent PNG cutouts for ecommerce, social media, and product photos. Powered by BiRefNet — 4 credits per image.",
+    "Remove background from image free online with AI. Create transparent PNG cutouts instantly for ecommerce, Amazon, Shopify, and social media. Powered by BiRefNet AI.",
   alternates: { canonical: "/tools/background-removal" },
   openGraph: {
-    title: "AI Background Remover — Transparent PNG Cutouts Online",
-    description: "Remove backgrounds from images with one click. Clean transparent PNG output powered by BiRefNet AI.",
+    title: "Remove Background from Image Free Online — AI Background Remover | Designora",
+    description: "Remove image backgrounds instantly with AI. Get clean transparent PNG cutouts for ecommerce and social media.",
   },
 };
 

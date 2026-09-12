@@ -4,13 +4,13 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Compress Image Online Free — Reduce JPG, PNG File Size",
+  title: "Image Compressor Online Free — Reduce Image Size in KB (50KB, 100KB, 20KB) | Designora",
   description:
-    "Compress images online for free. Reduce JPG, PNG, and WEBP file sizes by up to 80% with adjustable quality. No upload, runs in your browser.",
+    "Free online image compressor and photo size reducer. Compress JPG, PNG, and WEBP to 50KB, 100KB, or 20KB without losing quality. 100% private in-browser tool with no upload limits.",
   alternates: { canonical: "/tools/compress" },
   openGraph: {
-    title: "Free Online Image Compressor",
-    description: "Reduce image file size while keeping quality. Free, fast, private.",
+    title: "Image Compressor Online — Reduce Image Size in KB | Designora",
+    description: "Compress JPG, PNG, and WEBP images to 50KB, 100KB, or 20KB. Free, fast, private browser image compressor.",
   },
 };
 

@@ -4,13 +4,13 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Resize Image Online Free — Fast JPG, PNG, WEBP Resizer",
+  title: "Photo Size Reducer & Image Resizer Online Free — Resize JPG, PNG, WEBP | Designora",
   description:
-    "Resize images to exact dimensions online for free. No upload to servers — works in your browser. Supports JPG, PNG, and WEBP. No signup required.",
+    "Free online photo size reducer and image resizer. Resize photos to exact pixel dimensions or reduce image sizes without uploading to servers. 100% private, works in your browser.",
   alternates: { canonical: "/tools/resize" },
   openGraph: {
-    title: "Free Online Image Resizer",
-    description: "Resize JPG, PNG, WEBP images to any size instantly. Free, private, no signup.",
+    title: "Photo Size Reducer & Image Resizer Online Free | Designora",
+    description: "Resize JPG, PNG, WEBP images to any size instantly. Free online photo size reducer, private, no signup required.",
   },
 };
 

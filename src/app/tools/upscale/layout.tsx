@@ -5,14 +5,14 @@ import UpscalingGuides from "@/components/UpscalingGuides";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Convert Image to 4K Online with AI — 2× or 4× Upscaler",
+  title: "4K Photo Editor Online Free — AI Image Upscaler & HD Converter | Designora",
   description:
-    "Convert photos and images into larger, 4K-ready results online with AI. Choose 2× or 4× scaling, preview the output dimensions, and download a high-resolution PNG while preserving aspect ratio.",
+    "Convert images to 4K online free with AI. Enlarge photo resolution 2x and 4x up to 3840x2160, enhance photo quality, and download crisp high-resolution images without watermark.",
   alternates: { canonical: "/tools/upscale" },
   openGraph: {
-    title: "Convert Image to 4K Online with AI | Designora",
+    title: "4K Photo Editor Online Free — AI Image Upscaler | Designora",
     description:
-      "Convert an image or photo to a larger 4K-ready result with 2× or 4× AI scaling and a high-resolution PNG download.",
+      "Upscale photos and convert images to 4K resolution online with AI. Fast, high-resolution PNG download with no watermark.",
   },
 };
 

@@ -4,13 +4,13 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Enhance Image Quality Free Online — AI Photo Enhancer",
+  title: "AI Photo Enhancer Free Online — Photo Quality Enhancer & Image Fixer | Designora",
   description:
-    "Improve photo quality instantly with AI. Auto-fix brightness, contrast, and sharpness. Free online image enhancer — no signup, no watermark.",
+    "Enhance photo quality free online with AI. Automatically fix blurry images, adjust brightness, contrast, and sharpness. Free AI photo quality enhancer with instant preview.",
   alternates: { canonical: "/tools/enhance" },
   openGraph: {
-    title: "Free AI Image Enhancer Online",
-    description: "Enhance photo quality with one click. AI brightness, contrast, sharpness fix.",
+    title: "AI Photo Enhancer Free Online — Photo Quality Enhancer | Designora",
+    description: "Improve photo quality instantly with AI. Auto-fix blurry photos, lighting, and sharpness in one click.",
   },
 };
 

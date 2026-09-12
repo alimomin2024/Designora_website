@@ -2,13 +2,14 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designoraa.in";
-const staticContentLastModified = "2026-08-12";
+const staticContentLastModified = "2026-09-12";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { path: "", priority: 1.0, freq: "daily" as const },
     { path: "/tools", priority: 0.9, freq: "weekly" as const },
     { path: "/tools/upscale", priority: 0.9, freq: "weekly" as const },
+    { path: "/tools/4k-photo-editor", priority: 0.9, freq: "weekly" as const },
     { path: "/tools/background-removal", priority: 0.9, freq: "weekly" as const },
     { path: "/tools/watermark-removal", priority: 0.9, freq: "weekly" as const },
     { path: "/tools/resize", priority: 0.8, freq: "weekly" as const },

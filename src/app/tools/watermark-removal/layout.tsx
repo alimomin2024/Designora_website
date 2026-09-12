@@ -4,13 +4,13 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Remove Watermark from Image Online — AI Watermark Remover",
+  title: "Remove Watermark from Photo Online Free — AI Watermark Remover | Designora",
   description:
-    "Remove watermarks, text, and logos from images with AI inpainting. Paint over unwanted areas and get clean results. Affordable pay-as-you-go credits.",
+    "Remove watermarks, logos, date stamps, and text from photos online using AI inpainting. Clean photo restoration with original quality preserved. Fast and precise.",
   alternates: { canonical: "/tools/watermark-removal" },
   openGraph: {
-    title: "AI Watermark Remover — Erase Watermarks from Photos Online",
-    description: "Erase watermarks from photos using AI inpainting. Fast, clean results, original quality preserved.",
+    title: "Remove Watermark from Photo Online Free — AI Watermark Remover | Designora",
+    description: "Erase watermarks, text, and logos from photos using AI inpainting. Clean, fast results with original resolution preserved.",
   },
 };
 

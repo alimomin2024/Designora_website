@@ -1,9 +1,9 @@
 export const toolSeoData = {
   upscale: {
     toolName: "upscale",
-    headline: "Convert Image to 4K Online with AI — 2× or 4× Image Upscaler",
+    headline: "4K Photo Editor Online Free — AI Image Upscaler & HD Converter",
     description:
-      "Convert a photo or image into a larger 4K-ready result online with AI. Upload JPG, PNG, or WEBP files, choose 2× or 4× scaling, review the resulting pixel dimensions, and download a high-resolution PNG. The output preserves your aspect ratio and may reach 3840×2160 when your source dimensions and selected factor allow it. AI processing uses pay-as-you-go credits.",
+      "Convert images to 4K online with AI photo editing and upscaling. Upload JPG, PNG, or WEBP files, choose 2× or 4× scaling, and enlarge photos up to 3840×2160 (4K resolution) while preserving fine details and aspect ratio. AI processing uses pay-as-you-go credits.",
     steps: [
       "Upload a PNG, JPG, or WEBP image up to 20 MB.",
       "Choose 2× or 4× scaling based on the target pixel dimensions you need.",
@@ -28,7 +28,7 @@ export const toolSeoData = {
 
   "background-removal": {
     toolName: "background-removal",
-    headline: "AI Background Remover — Remove Image Background Online Free",
+    headline: "Remove Background from Image Free Online — AI Background Remover & Cutout Maker",
     description:
       "Remove backgrounds from images instantly using AI-powered segmentation. Designora uses BiRefNet deep learning to detect subjects and create clean transparent PNG cutouts in one click. No manual selection needed — just upload and download. Ideal for product photography, profile pictures, marketing materials, and ecommerce listings. Works with people, products, animals, logos, and complex scenes with hair, fur, and transparent objects.",
     steps: [
@@ -58,7 +58,7 @@ export const toolSeoData = {
 
   "watermark-removal": {
     toolName: "watermark-removal",
-    headline: "AI Watermark Remover — Remove Text & Logos from Images Online",
+    headline: "Remove Watermark from Photo Online Free — AI Watermark Remover",
     description:
       "Remove watermarks, text overlays, and logos from images using AI inpainting technology. Paint over the area you want to remove and Designora's AI fills it in with natural-looking content that blends seamlessly with the surrounding image. The result preserves the original photo quality and resolution.",
     steps: [
@@ -84,9 +84,9 @@ export const toolSeoData = {
 
   resize: {
     toolName: "resize",
-    headline: "Image Resizer Online Free — Resize JPG, PNG, WEBP Instantly",
+    headline: "Photo Size Reducer & Image Resizer Online Free — Resize JPG, PNG, WEBP Instantly",
     description:
-      "Resize images to exact pixel dimensions online for free. Designora's image resizer works entirely in your browser — no upload to servers, no quality loss. Set custom width and height, maintain aspect ratio, and download instantly. Works with JPG, PNG, and WEBP formats.",
+      "Resize images and reduce photo dimensions online for free. Designora's photo size reducer and resizer works entirely in your browser — no upload to servers, no quality loss. Set custom width and height, maintain aspect ratio, and download instantly. Works with JPG, PNG, and WEBP formats.",
     steps: [
       "Upload your image (PNG, JPG, or WEBP).",
       "Enter your desired width and height in pixels.",
@@ -110,9 +110,9 @@ export const toolSeoData = {
 
   compress: {
     toolName: "compress",
-    headline: "Image Compressor Online Free — Reduce JPG PNG WEBP File Size",
+    headline: "Image Compressor Online Free — Reduce Image Size in KB (50KB, 100KB, 20KB)",
     description:
-      "Compress images online for free to reduce file size while keeping visual quality. Adjust the quality slider to find the perfect balance between file size and appearance. Works with JPG, PNG, and WEBP images directly in your browser — no uploads to external servers. Like TinyPNG but free, unlimited, and with full quality control. Reduce image sizes by up to 80% for faster websites, smaller email attachments, and optimized social media uploads.",
+      "Compress images online for free to reduce file size while keeping visual quality. Reduce image size in KB — compress to 50KB, 100KB, 20KB, or custom limits. Works with JPG, PNG, and WEBP images directly in your browser without uploading to external servers. Fast, private, unlimited photo compressor.",
     steps: [
       "Upload your image (JPG, PNG, or WEBP).",
       "Adjust the quality slider — lower values mean smaller file sizes.",
@@ -266,9 +266,9 @@ export const toolSeoData = {
 
   enhance: {
     toolName: "enhance",
-    headline: "AI Image Enhancer Online — Improve Photo Quality Free",
+    headline: "AI Photo Enhancer Free Online — Photo Quality Enhancer & Image Fixer",
     description:
-      "Automatically enhance photo quality with AI-powered adjustments. Designora's image enhancer applies intelligent brightness correction, contrast optimization, and sharpness enhancement to make dull or dark photos look vibrant and professional. One-click enhancement with no manual editing needed.",
+      "Enhance photo quality online for free using AI. Designora's photo quality enhancer intelligently fixes blurry images, balances exposure and contrast, and sharpens details to make old or low-quality photos look crystal clear. Instant one-click processing with no signup required.",
     steps: [
       "Upload your image.",
       "The AI analyzes brightness, contrast, and sharpness levels.",
@@ -291,9 +291,9 @@ export const toolSeoData = {
 
   "heic-to-jpg": {
     toolName: "heic-to-jpg",
-    headline: "HEIC to JPG Converter Online — Convert HEIF Photos in Your Browser",
+    headline: "HEIC to JPG Converter Free Online — Convert iPhone Photos to JPG & PNG",
     description:
-      "Convert HEIC and HEIF photos to JPG or PNG online with local browser processing. Designora helps turn iPhone photos into widely compatible image files without uploading them to a server.",
+      "Convert HEIC to JPG online free with private browser processing. Convert Apple iPhone HEIC and HEIF photos to JPG or PNG format instantly without uploading files to any remote server. Unlimited, fast, and secure.",
     steps: [
       "Choose a HEIC or HEIF photo up to 20 MB.",
       "Wait while the photo is decoded locally in your browser.",
