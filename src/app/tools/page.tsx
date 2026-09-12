@@ -29,6 +29,18 @@ const tools = [
     category: "AI image tools",
   },
   {
+    href: "/tools/4k-photo-editor",
+    name: "4K Photo Editor",
+    description: "Enlarge and edit photos to 4K UHD with AI resolution upscaling.",
+    category: "AI image tools",
+  },
+  {
+    href: "/tools/unblur-image",
+    name: "Unblur Image Online",
+    description: "Fix blurry photos and restore edge sharpness in your browser.",
+    category: "AI image tools",
+  },
+  {
     href: "/tools/resize",
     name: "Image Resizer",
     description: "Resize JPG, PNG, and WEBP images to exact pixel dimensions in your browser.",
@@ -56,6 +68,30 @@ const tools = [
     href: "/tools/compress",
     name: "Image Compressor",
     description: "Reduce JPG, PNG, and WEBP file sizes with adjustable quality control.",
+    category: "Resize and optimize",
+  },
+  {
+    href: "/tools/compress-to-50kb",
+    name: "Compress to 50KB",
+    description: "Strictly reduce image size to under 50KB for government forms and exams.",
+    category: "Resize and optimize",
+  },
+  {
+    href: "/tools/compress-to-100kb",
+    name: "Compress to 100KB",
+    description: "Shrink image files to under 100KB for resumes, portals, and uploads.",
+    category: "Resize and optimize",
+  },
+  {
+    href: "/tools/compress-to-20kb",
+    name: "Compress to 20KB",
+    description: "Reduce photo and signature sizes to under 20KB for official portals.",
+    category: "Resize and optimize",
+  },
+  {
+    href: "/tools/passport-photo-maker",
+    name: "Passport Photo Maker",
+    description: "Create official passport photos (India 3.5×4.5cm, US 2×2 inch, Schengen) and 6-photo print sheets.",
     category: "Resize and optimize",
   },
   {
