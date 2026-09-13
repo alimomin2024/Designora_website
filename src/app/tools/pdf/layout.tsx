@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "PDF to Image Converter Free Online — Also Image to PDF",
+  title: "PDF to Image Converter Free",
   description:
     "Convert PDF pages to high-quality PNG images or combine images into a single PDF. Free, works in browser, no signup. Fast and private.",
   alternates: { canonical: "/tools/pdf" },

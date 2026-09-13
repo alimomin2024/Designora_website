@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-upscale-image-to-4k-online",
     title: "How 2× and 4× AI Upscaling Affects 4K-Ready Images",
-    metaTitle: "Convert Image to 4K Online — 2× and 4× AI Upscaling Guide",
+    metaTitle: "Convert Image to 4K Online Guide",
     metaDescription: "Learn how to convert images to 4K online free with 2× and 4× AI upscaling. Enlarge photos to 3840×2160 without losing quality.",
     date: "2026-06-05",
     readTime: "6 min read",
@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "remove-background-from-image-free",
     title: "How to Remove Background from Image for Free Online",
-    metaTitle: "Remove Background from Image Free Online — Complete Guide",
+    metaTitle: "Remove Background from Image Free",
     metaDescription: "Remove backgrounds from images online for free with AI. Get transparent PNG cutouts for ecommerce, social media, and design projects. No Photoshop needed.",
     date: "2026-06-05",
     readTime: "3 min read",
@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-image-size-for-etsy-listings",
     title: "Best Image Size for Etsy Listings in 2026",
-    metaTitle: "Best Image Size for Etsy Listings 2026 — Complete Size Guide",
+    metaTitle: "Best Image Size for Etsy Listings",
     metaDescription: "Learn the recommended image sizes for Etsy product photos in 2026. Optimal dimensions, DPI settings, and file formats for listings that sell.",
     date: "2026-06-05",
     readTime: "5 min read",
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "png-vs-jpg-which-image-format",
     title: "PNG vs JPG: Which Image Format Should You Use?",
-    metaTitle: "PNG vs JPG — When to Use Each Format (Complete Comparison)",
+    metaTitle: "PNG vs JPG: Format Comparison Guide",
     metaDescription: "PNG vs JPG explained: when to use each format for web, print, ecommerce, and social media. Compare quality, file size, transparency, and compression.",
     date: "2026-06-05",
     readTime: "4 min read",
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-compress-images-for-web",
     title: "How to Compress Images for Website Without Losing Quality",
-    metaTitle: "Compress Images for Web Free — Reduce Size Without Quality Loss",
+    metaTitle: "Compress Images for Web Free Guide",
     metaDescription: "Learn how to compress images for your website without visible quality loss. Reduce page load time with optimized JPG, PNG, and WEBP images.",
     date: "2026-06-05",
     readTime: "4 min read",
@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-remove-watermark-from-photo",
     title: "How to Remove Watermark from Photo Using AI",
-    metaTitle: "Remove Watermark from Photo Free — AI Watermark Remover Guide",
+    metaTitle: "Remove Watermark from Photo Free",
     metaDescription: "Learn how to remove watermarks from photos using AI inpainting. Step-by-step guide to erase text, logos, and stamps from images online.",
     date: "2026-06-05",
     readTime: "3 min read",
@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "change-image-dpi-for-printing",
     title: "How to Change Image DPI for Printing (72 to 300 DPI)",
-    metaTitle: "Change Image DPI for Print Free Online — 72 to 300 DPI Guide",
+    metaTitle: "Change Image DPI for Print (300 DPI)",
     metaDescription: "Change image DPI from 72 to 300 for professional printing. Learn what DPI means, when to use 300 vs 600 DPI, and how to set it free online.",
     date: "2026-06-05",
     readTime: "4 min read",
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "convert-pdf-to-images-online",
     title: "How to Convert PDF to Images Online (Free, No Upload)",
-    metaTitle: "Convert PDF to Image Free Online — PDF to PNG Converter Guide",
+    metaTitle: "Convert PDF to Image Online Free",
     metaDescription: "Convert PDF pages to high-quality PNG images for free online. No upload needed — runs in your browser. Works with multi-page PDFs.",
     date: "2026-06-05",
     readTime: "3 min read",
@@ -149,7 +149,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "instagram-image-sizes-guide",
     title: "Instagram Image Sizes Guide 2026 — Every Format Covered",
-    metaTitle: "Instagram Image Size 2026 — Post, Story, Reel Dimensions Guide",
+    metaTitle: "Instagram Image Sizes Guide 2026",
     metaDescription: "Complete Instagram image size guide for 2026. Post, story, reel, profile, and carousel dimensions. Resize images to exact Instagram specs.",
     date: "2026-06-05",
     readTime: "4 min read",
@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-make-image-transparent",
     title: "How to Make Image Background Transparent Online",
-    metaTitle: "Make Image Background Transparent Free — PNG with No Background",
+    metaTitle: "Make Image Background Transparent",
     metaDescription: "Make any image background transparent online for free. Create PNG cutouts with AI background removal. Perfect for logos, products, and design.",
     date: "2026-06-05",
     readTime: "3 min read",
@@ -182,7 +182,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "reduce-image-file-size-without-losing-quality",
     title: "How to Reduce Image File Size Without Losing Quality",
-    metaTitle: "Reduce Image File Size Free — Without Losing Quality",
+    metaTitle: "Reduce Image File Size Without Loss",
     metaDescription: "Reduce image file size by up to 80% without visible quality loss. Free online compression for JPG, PNG, and WEBP. No signup or watermark.",
     date: "2026-06-05",
     readTime: "3 min read",
@@ -198,7 +198,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "extract-colors-from-image-for-branding",
     title: "How to Extract a Color Palette from Any Image for Branding",
-    metaTitle: "Extract Color Palette from Image Free — Hex Codes for Branding",
+    metaTitle: "Extract Color Palette from Image",
     metaDescription: "Extract dominant colors from any image and get hex codes for your brand. Free color palette generator for designers, marketers, and content creators.",
     date: "2026-06-05",
     readTime: "3 min read",
@@ -214,7 +214,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "4k-photo-editor-online-free",
     title: "4K-Ready Images: AI Upscaling vs Traditional Editing",
-    metaTitle: "4K Photo Editor Online Free — AI Photo Editing & 4K Upscaler",
+    metaTitle: "4K Photo Editing Guide Online",
     metaDescription: "Best 4K photo editor online free. Enlarge images up to 4K resolution (3840×2160) with AI upscaling. No watermark, fast in-browser tool.",
     date: "2026-06-12",
     readTime: "5 min read",
@@ -231,7 +231,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "make-image-4k-quality",
     title: "How to Check Whether an Image Is 4K-Ready",
-    metaTitle: "How to Make an Image 4K-Ready — Check 2×/4× Output",
+    metaTitle: "How to Make Images 4K Quality",
     metaDescription: "Learn how to evaluate an image for 4K-ready output, choose 2× or 4× AI upscaling, and check final pixel dimensions without assuming every source becomes 3840×2160.",
     date: "2026-06-12",
     readTime: "5 min read",
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-image-upscaler-free-online",
     title: "AI Upscaling Quality Limits and Best Uses",
-    metaTitle: "AI Upscaling Guide — 2×/4× Processing and Quality Limits",
+    metaTitle: "AI Image Upscaling Guide & Limits",
     metaDescription: "Learn how AI image upscaling works, which source images benefit most, and what quality limits to expect. Designora supports 2× and 4× processing with pay-as-you-go credits and PNG output.",
     date: "2026-06-12",
     readTime: "5 min read",
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-upscale-image-free-no-watermark",
     title: "How to Upscale an Image Free Online Without Watermark",
-    metaTitle: "Upscale Image Free Online Without Watermark — 2026 Guide",
+    metaTitle: "Upscale Image Without Watermark",
     metaDescription: "Step-by-step guide to upscaling images to 2× or 4× resolution online for free with no watermark. Compare tools and understand what AI upscaling can and cannot do.",
     date: "2026-09-07",
     readTime: "5 min read",
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "convert-image-to-4k-resolution-online-free",
     title: "How to Convert Any Image to 4K Resolution Online Free",
-    metaTitle: "Convert Image to 4K Resolution Online Free — Step-by-Step Guide",
+    metaTitle: "Convert Image to 4K Resolution",
     metaDescription: "Learn how to convert a normal image to 4K resolution online for free using AI upscaling. Understand what 4K means for images and what output to expect.",
     date: "2026-09-07",
     readTime: "6 min read",
@@ -301,7 +301,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "batch-resize-images-online-free",
     title: "How to Batch Resize Images Online Free — Resize Multiple Photos at Once",
-    metaTitle: "Batch Resize Images Online Free — Resize Multiple Photos at Once",
+    metaTitle: "How to Batch Resize Photos Online",
     metaDescription: "Resize multiple images to the same dimensions at once online for free. No software needed. Step-by-step guide for bulk image resizing with exact pixel dimensions.",
     date: "2026-09-07",
     readTime: "5 min read",
@@ -318,7 +318,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-remove-watermark-from-photo-online-free",
     title: "How to Remove a Watermark from a Photo Online Free",
-    metaTitle: "Remove Watermark from Photo Online Free — Step-by-Step Guide 2026",
+    metaTitle: "How to Remove Photo Watermarks",
     metaDescription: "Learn how to remove watermarks from photos online for free using AI inpainting. Understand what works, what does not, and the legal limits of watermark removal.",
     date: "2026-09-07",
     readTime: "5 min read",
@@ -335,7 +335,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-make-image-hd-quality-online",
     title: "How to Make a Photo HD Quality Online Free",
-    metaTitle: "Make Photo HD Quality Online Free — AI Image Enhancer Guide 2026",
+    metaTitle: "Make Photo HD Quality Online",
     metaDescription: "Learn how to enhance photo quality to HD online for free using AI. Includes step-by-step instructions, expected results, and tips for best output quality.",
     date: "2026-09-07",
     readTime: "5 min read",
@@ -352,7 +352,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "png-to-hd-image-converter-online",
     title: "PNG to HD Image: How to Convert PNG to High Resolution Online",
-    metaTitle: "PNG to HD Image Converter Online Free — High Resolution Guide",
+    metaTitle: "Convert PNG to HD Image Online",
     metaDescription: "Convert a PNG image to HD or 4K resolution online for free. Learn how AI upscaling converts PNG to high resolution and what output quality to expect.",
     date: "2026-09-07",
     readTime: "4 min read",
@@ -369,7 +369,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-4k-photo-editor-online-free-2026",
     title: "Best Free 4K Photo Editor Online in 2026 — No Software Needed",
-    metaTitle: "Best 4K Photo Editor Online Free 2026 — No Download, No Watermark",
+    metaTitle: "Best 4K Photo Editors in 2026",
     metaDescription: "The best free online 4K photo editors in 2026 reviewed. Compare AI upscaling tools, features, watermark policies, and pricing to find the right one for your needs.",
     date: "2026-09-07",
     readTime: "6 min read",
@@ -386,7 +386,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "image-upscale-ai-free-guide",
     title: "AI Image Upscaler Free: How It Works and What Results to Expect",
-    metaTitle: "AI Image Upscaler Free — How It Works, Results, and Best Practices",
+    metaTitle: "AI Image Upscaler Tutorial",
     metaDescription: "Understand how free AI image upscaling works, what quality to expect from different source images, and how to get the best output from an AI upscaler.",
     date: "2026-09-07",
     readTime: "6 min read",

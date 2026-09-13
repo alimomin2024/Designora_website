@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designoraa.in";
-const staticContentLastModified = "2026-09-12";
+const staticContentLastModified = "2026-09-13";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

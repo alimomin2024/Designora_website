@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Crop and Rotate Image Online Free — JPG, PNG, WEBP",
+  title: "Crop & Rotate Image Online",
   description:
     "Crop and rotate JPG, PNG, and WEBP images online for free. Set an exact crop box, rotate in 90-degree increments, and download locally in your browser.",
   alternates: { canonical: "/tools/crop-rotate" },

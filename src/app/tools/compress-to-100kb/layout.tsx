@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Compress Image to 100KB Online Free — Fast JPG & PNG Compressor",
+  title: "Compress Image to 100KB Online",
   description:
     "Compress image to 100KB online for free. Shrink JPG, PNG, and WEBP files to under 100KB while preserving maximum visual clarity. 100% private in-browser tool.",
   alternates: { canonical: "/tools/compress-to-100kb" },

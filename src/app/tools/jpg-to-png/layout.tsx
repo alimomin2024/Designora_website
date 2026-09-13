@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "JPG to PNG Converter Free Online — Lossless Image Converter",
+  title: "JPG to PNG Converter Free",
   description:
     "Convert JPG to PNG online for free. Convert JPEG images to high-quality lossless PNG format directly in your browser. Fast, private, with zero upload limits.",
   alternates: { canonical: "/tools/jpg-to-png" },

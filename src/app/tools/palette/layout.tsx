@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Extract Color Palette from Image Free Online — Hex Codes Included",
+  title: "Extract Color Palette Online",
   description:
     "Extract dominant colors from any image online. Get hex codes for branding, design systems, and creative projects. Free, no signup required.",
   alternates: { canonical: "/tools/palette" },

@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Compress Image to 20KB Online Free — Signature & Photo Size Reducer",
+  title: "Compress Image to 20KB Online",
   description:
     "Compress image to 20KB online for free. Reduce photo and signature sizes to strictly under 20KB for competitive exams (UPSC, SSC, NEET, JEE), banking, and portal uploads.",
   alternates: { canonical: "/tools/compress-to-20kb" },

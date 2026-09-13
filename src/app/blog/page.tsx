@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Image Editing Guides & Tutorials — Free Tips for Designers",
+  title: "Image Editing Guides & Tips",
   description:
     "Free guides on image upscaling, background removal, compression, resizing, and more. Learn how to edit images online with step-by-step tutorials.",
   alternates: { canonical: "/blog" },

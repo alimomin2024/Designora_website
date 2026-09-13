@@ -1,0 +1,51 @@
+# Designora
+
+> Designora (https://designoraa.in) is a suite of 27 high-speed image processing and AI editing tools. Non-AI utilities execute 100% locally in the browser via WebAssembly and HTML5 Canvas, ensuring complete user privacy, zero server uploads, and instant downloads.
+
+## Core Features & Architecture
+- **Client-Side Privacy**: Non-AI image compression, resizing, conversion, cropping, and PDF utilities process photos on the user device; image data never reaches remote servers.
+- **AI-Powered Enhancements**: AI tools provide super-resolution upscaling (up to 4K), background removal, watermark removal, photo enhancement, and deblurring.
+- **Zero Cost**: All 20 browser-native tools are 100% free with unlimited usage. AI tools offer generous free credits.
+- **Device Support**: Fully responsive across mobile, tablet, and desktop browsers without plugin or app installation.
+
+## Image Tools Directory
+
+- [Image Compressor](https://designoraa.in/tools/compress): Compress JPG, PNG, and WEBP images in browser with real-time preview and quality sliders.
+- [Compress Image to 50KB](https://designoraa.in/tools/compress-to-50kb): Automatically compress JPG/PNG photos down to exactly 50KB for job, portal, and exam uploads.
+- [Compress Image to 100KB](https://designoraa.in/tools/compress-to-100kb): Compress image files to under 100KB with optimized quality balance.
+- [Compress Image to 20KB](https://designoraa.in/tools/compress-to-20kb): Compress signatures, thumbnails, and passport photos strictly below 20KB.
+- [PNG to JPG Converter](https://designoraa.in/tools/png-to-jpg): Convert transparent or high-res PNG images to optimized JPG files with instant client-side download.
+- [JPG to PNG Converter](https://designoraa.in/tools/jpg-to-png): Convert compressed JPG photos to lossless PNG format in the browser.
+- [WEBP to JPG Converter](https://designoraa.in/tools/webp-to-jpg): Convert modern WEBP web images to universally compatible JPEG photos.
+- [JPG to PDF Converter](https://designoraa.in/tools/jpg-to-pdf): Combine multiple JPG/PNG photos into a single paginated PDF document.
+- [PDF to JPG Converter](https://designoraa.in/tools/pdf-to-jpg): Render and extract PDF pages into crystal-clear JPG images with one-click download or ZIP export.
+- [Image Resizer](https://designoraa.in/tools/resize): Resize photos to custom width and height with aspect ratio lock and quality control.
+- [Batch Image Resizer](https://designoraa.in/tools/batch-resize): Resize dozens of photos simultaneously with customizable max dimension settings.
+- [Circle Crop Image](https://designoraa.in/tools/circle-crop): Crop images into perfect circular masks for social media avatars, profile pictures, and badges.
+- [Flip & Mirror Image](https://designoraa.in/tools/flip-image): Flip photos horizontally (mirror effect) or vertically (upside-down) and rotate angles.
+- [Crop & Rotate Image](https://designoraa.in/tools/crop-rotate): Crop photos to common aspect ratios (1:1, 16:9, 4:3, 9:16) and rotate in 90-degree increments.
+- [Passport Photo Maker](https://designoraa.in/tools/passport-photo-maker): Create compliance-ready passport and visa photos with official presets (2x2 inch, 35x45mm, US Visa, Schengen, India).
+- [Social Media Image Resizer](https://designoraa.in/tools/social-media-image-size): Preset sizing for Instagram Posts, Stories, Reels, Facebook Covers, Twitter Banners, and LinkedIn.
+- [HEIC to JPG Converter](https://designoraa.in/tools/heic-to-jpg): Convert Apple iPhone HEIC and HEIF photos directly to JPG without uploading to cloud servers.
+- [General Image Format Converter](https://designoraa.in/tools/convert): Convert between PNG, JPG, and WEBP formats with custom quality settings.
+- [PDF to Image Converter](https://designoraa.in/tools/pdf): Convert PDF documents to PNG and JPG images in the browser.
+- [Extract Color Palette](https://designoraa.in/tools/palette): Extract dominant color swatches, Hex codes, and RGB values from any uploaded image.
+- [Change Image DPI](https://designoraa.in/tools/metadata): Adjust EXIF resolution tags to 300 DPI for high-quality printing without changing pixel data.
+- [AI Image Upscaler](https://designoraa.in/tools/upscale): Enlarge photos 2x or 4x with deep-learning AI super-resolution while preserving crisp textures.
+- [4K Photo Editor](https://designoraa.in/tools/4k-photo-editor): Upscale and prepare images for ultra-high-definition 4K screens (3840x2160).
+- [AI Background Remover](https://designoraa.in/tools/background-removal): Isolate subjects and erase backgrounds automatically to create transparent PNGs.
+- [AI Watermark Remover](https://designoraa.in/tools/watermark-removal): Erase stamps, logos, text overlays, and watermarks cleanly using AI inpainting.
+- [AI Photo Enhancer](https://designoraa.in/tools/enhance): Improve lighting, reduce noise, and boost color saturation on degraded or underexposed photos.
+- [AI Unblur Image](https://designoraa.in/tools/unblur-image): Sharpen out-of-focus or motion-blurred photographs using neural sharpness restoration.
+
+## Practical Guides & Workflows
+
+- [Instagram Image Sizes Guide 2026](https://designoraa.in/blog/instagram-image-sizes-guide): Detailed dimensions for Posts, Stories, Reels, and Profile Pictures.
+- [Compress Images for Web Free Guide](https://designoraa.in/blog/how-to-compress-images-for-web): Technical guide to optimizing page load speed and Core Web Vitals with compressed assets.
+- [PNG vs JPG Comparison](https://designoraa.in/blog/png-vs-jpg-which-image-format): Comprehensive breakdown of transparency, compression artifacts, and use cases.
+- [Convert Image to 4K Online](https://designoraa.in/blog/how-to-upscale-image-to-4k-online): How super-resolution upscaling transforms low-res images into 3840x2160 displays.
+- [Remove Background Free Guide](https://designoraa.in/blog/remove-background-from-image-free): How AI segmentation isolates subjects for eCommerce and transparent PNG badges.
+- [Passport Photo Maker Presets](https://designoraa.in/blog/best-image-size-for-etsy-listings): Government regulations and photo guidelines.
+
+## Full Technical Documentation
+For full algorithmic details, client-side processing benchmarks, and API documentation, refer to [llms-full.txt](https://designoraa.in/llms-full.txt).

@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Remove Watermark from Photo Online Free — AI Watermark Remover ",
+  title: "Remove Watermark Free Online",
   description:
     "Remove watermarks, logos, date stamps, and text from photos online using AI inpainting. Clean photo restoration with original quality preserved. Fast and precise.",
   alternates: { canonical: "/tools/watermark-removal" },

@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "WEBP to JPG Converter Free Online — Convert WEBP to JPEG Instantly",
+  title: "WEBP to JPG Converter Free",
   description:
     "Convert WEBP to JPG online for free. Turn WEBP images into widely compatible JPG format in your browser with adjustable quality. 100% private and unlimited.",
   alternates: { canonical: "/tools/webp-to-jpg" },

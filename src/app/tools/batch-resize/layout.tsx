@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Batch Resize Images Online Free — Resize Multiple Photos at Once",
+  title: "Batch Image Resizer Free Online",
   description:
     "Resize multiple images at once to the same dimensions. Free batch image resizer — drag, drop, download. No upload to servers, works in browser.",
   alternates: { canonical: "/tools/batch-resize" },

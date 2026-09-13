@@ -1,0 +1,222 @@
+# Designora — Full Documentation & Tool Specification
+
+> Designora (https://designoraa.in) delivers instant, privacy-focused image manipulation and AI enhancement directly in the user browser.
+
+## Architecture & Privacy Model
+
+### 1. Browser-Native Processing (Zero Server Ingestion)
+The following 20 tools execute exclusively within client execution threads using HTML5 Canvas 2D context, WebAssembly, and JavaScript binary buffers (ArrayBuffer, Blob):
+- **Compression**: `/tools/compress`, `/tools/compress-to-50kb`, `/tools/compress-to-100kb`, `/tools/compress-to-20kb`
+- **Converters**: `/tools/png-to-jpg`, `/tools/jpg-to-png`, `/tools/webp-to-jpg`, `/tools/convert`, `/tools/heic-to-jpg`
+- **Geometry**: `/tools/resize`, `/tools/batch-resize`, `/tools/crop-rotate`, `/tools/circle-crop`, `/tools/flip-image`, `/tools/passport-photo-maker`, `/tools/social-media-image-size`
+- **PDF Engine**: `/tools/jpg-to-pdf` (via jsPDF), `/tools/pdf-to-jpg` and `/tools/pdf` (via PDF.js worker)
+- **Color & Metadata**: `/tools/palette`, `/tools/metadata`
+
+**Security Guarantee**: Image files never leave the client device for non-AI tasks. Users can safely process sensitive identity documents, legal contracts, passports, and medical scans.
+
+### 2. AI Processing Engine
+Tools requiring neural inference utilize serverless worker pipelines with automatic ephemeral caching:
+- `/tools/upscale` & `/tools/4k-photo-editor`: Real-ESRGAN / SwinIR neural super-resolution for 2x and 4x scale factors.
+- `/tools/background-removal`: DIS/RMBG neural matting for sub-pixel boundary transparency.
+- `/tools/watermark-removal`: LaMa-based inpainting for seamless background patch synthesis.
+- `/tools/unblur-image` & `/tools/enhance`: NAFNet neural deblurring and adaptive tone curve contrast restoration.
+
+---
+
+## Detailed Tool Specifications
+
+### Image Compressor
+- **URL**: https://designoraa.in/tools/compress
+- **Primary Function**: Compress JPG, PNG, and WEBP images in browser with real-time preview and quality sliders.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Compress Image to 50KB
+- **URL**: https://designoraa.in/tools/compress-to-50kb
+- **Primary Function**: Automatically compress JPG/PNG photos down to exactly 50KB for job, portal, and exam uploads.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Compress Image to 100KB
+- **URL**: https://designoraa.in/tools/compress-to-100kb
+- **Primary Function**: Compress image files to under 100KB with optimized quality balance.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Compress Image to 20KB
+- **URL**: https://designoraa.in/tools/compress-to-20kb
+- **Primary Function**: Compress signatures, thumbnails, and passport photos strictly below 20KB.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### PNG to JPG Converter
+- **URL**: https://designoraa.in/tools/png-to-jpg
+- **Primary Function**: Convert transparent or high-res PNG images to optimized JPG files with instant client-side download.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### JPG to PNG Converter
+- **URL**: https://designoraa.in/tools/jpg-to-png
+- **Primary Function**: Convert compressed JPG photos to lossless PNG format in the browser.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### WEBP to JPG Converter
+- **URL**: https://designoraa.in/tools/webp-to-jpg
+- **Primary Function**: Convert modern WEBP web images to universally compatible JPEG photos.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### JPG to PDF Converter
+- **URL**: https://designoraa.in/tools/jpg-to-pdf
+- **Primary Function**: Combine multiple JPG/PNG photos into a single paginated PDF document.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### PDF to JPG Converter
+- **URL**: https://designoraa.in/tools/pdf-to-jpg
+- **Primary Function**: Render and extract PDF pages into crystal-clear JPG images with one-click download or ZIP export.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Image Resizer
+- **URL**: https://designoraa.in/tools/resize
+- **Primary Function**: Resize photos to custom width and height with aspect ratio lock and quality control.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Batch Image Resizer
+- **URL**: https://designoraa.in/tools/batch-resize
+- **Primary Function**: Resize dozens of photos simultaneously with customizable max dimension settings.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Circle Crop Image
+- **URL**: https://designoraa.in/tools/circle-crop
+- **Primary Function**: Crop images into perfect circular masks for social media avatars, profile pictures, and badges.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Flip & Mirror Image
+- **URL**: https://designoraa.in/tools/flip-image
+- **Primary Function**: Flip photos horizontally (mirror effect) or vertically (upside-down) and rotate angles.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Crop & Rotate Image
+- **URL**: https://designoraa.in/tools/crop-rotate
+- **Primary Function**: Crop photos to common aspect ratios (1:1, 16:9, 4:3, 9:16) and rotate in 90-degree increments.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Passport Photo Maker
+- **URL**: https://designoraa.in/tools/passport-photo-maker
+- **Primary Function**: Create compliance-ready passport and visa photos with official presets (2x2 inch, 35x45mm, US Visa, Schengen, India).
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Social Media Image Resizer
+- **URL**: https://designoraa.in/tools/social-media-image-size
+- **Primary Function**: Preset sizing for Instagram Posts, Stories, Reels, Facebook Covers, Twitter Banners, and LinkedIn.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### HEIC to JPG Converter
+- **URL**: https://designoraa.in/tools/heic-to-jpg
+- **Primary Function**: Convert Apple iPhone HEIC and HEIF photos directly to JPG without uploading to cloud servers.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### General Image Format Converter
+- **URL**: https://designoraa.in/tools/convert
+- **Primary Function**: Convert between PNG, JPG, and WEBP formats with custom quality settings.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### PDF to Image Converter
+- **URL**: https://designoraa.in/tools/pdf
+- **Primary Function**: Convert PDF documents to PNG and JPG images in the browser.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Extract Color Palette
+- **URL**: https://designoraa.in/tools/palette
+- **Primary Function**: Extract dominant color swatches, Hex codes, and RGB values from any uploaded image.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### Change Image DPI
+- **URL**: https://designoraa.in/tools/metadata
+- **Primary Function**: Adjust EXIF resolution tags to 300 DPI for high-quality printing without changing pixel data.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: 100% Client-Side WebAssembly / Canvas
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### AI Image Upscaler
+- **URL**: https://designoraa.in/tools/upscale
+- **Primary Function**: Enlarge photos 2x or 4x with deep-learning AI super-resolution while preserving crisp textures.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: Serverless AI Inference Pipeline
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### 4K Photo Editor
+- **URL**: https://designoraa.in/tools/4k-photo-editor
+- **Primary Function**: Upscale and prepare images for ultra-high-definition 4K screens (3840x2160).
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: Serverless AI Inference Pipeline
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### AI Background Remover
+- **URL**: https://designoraa.in/tools/background-removal
+- **Primary Function**: Isolate subjects and erase backgrounds automatically to create transparent PNGs.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: Serverless AI Inference Pipeline
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### AI Watermark Remover
+- **URL**: https://designoraa.in/tools/watermark-removal
+- **Primary Function**: Erase stamps, logos, text overlays, and watermarks cleanly using AI inpainting.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: Serverless AI Inference Pipeline
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### AI Photo Enhancer
+- **URL**: https://designoraa.in/tools/enhance
+- **Primary Function**: Improve lighting, reduce noise, and boost color saturation on degraded or underexposed photos.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: Serverless AI Inference Pipeline
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+### AI Unblur Image
+- **URL**: https://designoraa.in/tools/unblur-image
+- **Primary Function**: Sharpen out-of-focus or motion-blurred photographs using neural sharpness restoration.
+- **Input Formats**: JPG, PNG, WEBP, HEIC, PDF
+- **Execution**: Serverless AI Inference Pipeline
+- **Rate Limit**: Unlimited (Non-AI) / Credit-based (AI)
+
+
+## Contact & Site Information
+- **Domain**: https://designoraa.in
+- **Sitemap**: https://designoraa.in/sitemap.xml
+- **Robots**: https://designoraa.in/robots.txt
+- **LLM Index**: https://designoraa.in/llms.txt

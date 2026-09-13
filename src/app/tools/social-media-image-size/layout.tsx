@@ -4,7 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import { toolSeoData } from "@/lib/tool-seo-data";
 
 export const metadata: Metadata = {
-  title: "Social Media Image Resizer — Instagram, Facebook and More",
+  title: "Social Media Image Resizer",
   description:
     "Resize and crop images for Instagram, Facebook, TikTok, YouTube, Pinterest, X, and LinkedIn with ready-made pixel presets or custom dimensions.",
   alternates: { canonical: "/tools/social-media-image-size" },

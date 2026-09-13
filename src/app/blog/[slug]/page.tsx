@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/lib/blog-posts";
 
@@ -57,9 +57,27 @@ export default async function BlogPostPage({ params }: Props) {
     },
   };
 
+  const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
+  const n = blogPosts.length;
+  const prevPost = blogPosts[(currentIndex - 1 + n) % n];
+  const nextPost = blogPosts[(currentIndex + 1) % n];
+
+  // Circular ring + same tool matches to guarantee multiple incoming links for all posts
   const sameToolPosts = blogPosts.filter((p) => p.slug !== slug && p.toolLink === post.toolLink);
-  const otherPosts = blogPosts.filter((p) => p.slug !== slug && p.toolLink !== post.toolLink);
-  const related = [...sameToolPosts, ...otherPosts].slice(0, 3);
+  const offsetPosts = [
+    blogPosts[(currentIndex + 2) % n],
+    blogPosts[(currentIndex + 3) % n],
+    blogPosts[(currentIndex + 4) % n],
+    blogPosts[(currentIndex + 5) % n],
+  ];
+
+  const relatedMap = new Map<string, (typeof blogPosts)[0]>();
+  [...sameToolPosts, ...offsetPosts].forEach((p) => {
+    if (p.slug !== slug && !relatedMap.has(p.slug)) {
+      relatedMap.set(p.slug, p);
+    }
+  });
+  const related = Array.from(relatedMap.values()).slice(0, 4);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
@@ -70,13 +88,16 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
 
-      <div className="mb-8">
+      <div className="mb-8 flex items-center justify-between">
         <Link
           href="/blog"
-          className="text-sm text-muted-foreground hover:text-primary transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
-          &larr; All guides
+          <ChevronLeft className="h-4 w-4" /> All Guides & Tutorials
         </Link>
+        <span className="text-xs text-muted-foreground flex items-center gap-1">
+          <BookOpen className="h-3.5 w-3.5" /> Designora Guides
+        </span>
       </div>
 
       <header className="mb-10">
@@ -136,9 +157,34 @@ export default async function BlogPostPage({ params }: Props) {
         </Link>
       </div>
 
-      <section className="mt-12">
-        <h2 className="text-lg font-bold mb-4">More Guides</h2>
-        <div className="grid gap-4 sm:grid-cols-3">
+      <nav className="mt-12 grid gap-4 sm:grid-cols-2 border-t border-border/40 pt-8" aria-label="Previous and Next guide navigation">
+        <Link
+          href={`/blog/${prevPost.slug}`}
+          className="glass rounded-xl p-4 hover:border-primary/40 transition-colors group flex flex-col justify-between"
+        >
+          <span className="flex items-center gap-1 text-xs font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+            <ChevronLeft className="h-3.5 w-3.5" /> Previous Guide
+          </span>
+          <span className="text-sm font-medium mt-2 line-clamp-1 group-hover:text-primary transition-colors">
+            {prevPost.title}
+          </span>
+        </Link>
+        <Link
+          href={`/blog/${nextPost.slug}`}
+          className="glass rounded-xl p-4 hover:border-primary/40 transition-colors group flex flex-col justify-between text-right"
+        >
+          <span className="flex items-center justify-end gap-1 text-xs font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+            Next Guide <ChevronRight className="h-3.5 w-3.5" />
+          </span>
+          <span className="text-sm font-medium mt-2 line-clamp-1 group-hover:text-primary transition-colors">
+            {nextPost.title}
+          </span>
+        </Link>
+      </nav>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-bold mb-4">Related Guides & Tutorials</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
           {related.map((r) => (
             <Link
               key={r.slug}
@@ -148,7 +194,7 @@ export default async function BlogPostPage({ params }: Props) {
               <span className="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-2">
                 {r.title}
               </span>
-              <span className="block text-xs text-muted-foreground mt-1">{r.readTime}</span>
+              <span className="block text-xs text-muted-foreground mt-2">{r.readTime}</span>
             </Link>
           ))}
         </div>
