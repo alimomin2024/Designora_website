@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Share2 } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -12,13 +13,40 @@ export default function Footer() {
               <span className="text-lg font-bold gradient-text">Designora</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Professional image tools powered by AI. Resize, upscale, remove backgrounds, erase
+              Professional image tools powered by AI and client-side web technology. Resize, upscale, remove backgrounds, erase
               watermarks, compress, convert, and more.
             </p>
+            <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="flex items-center gap-1 font-medium text-foreground"><Share2 className="h-3.5 w-3.5" /> Share:</span>
+              <a
+                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdesignoraa.in&text=Check%20out%20Designora%20-%20Free%20AI%20Image%20Tools%20Online"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                X (Twitter)
+              </a>
+              <a
+                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdesignoraa.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://www.reddit.com/submit?url=https%3A%2F%2Fdesignoraa.in&title=Designora%20-%20Free%20AI%20Image%20Tools%20Online"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                Reddit
+              </a>
+            </div>
           </div>
 
           <div>
-            <h4 className="mb-3 text-sm font-semibold text-foreground">Tools</h4>
+            <p className="mb-3 text-sm font-semibold text-foreground uppercase tracking-wider">Tools</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/tools/upscale" className="hover:text-primary transition-colors">AI Image Upscaler</Link></li>
               <li><Link href="/tools/4k-photo-editor" className="hover:text-primary transition-colors">4K Photo Editor</Link></li>
@@ -51,17 +79,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-3 text-sm font-semibold text-foreground">Resources</h4>
+            <p className="mb-3 text-sm font-semibold text-foreground uppercase tracking-wider">Resources</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/blog" className="hover:text-primary transition-colors">Guides & Tutorials</Link></li>
-              <li><Link href="/pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
-              <li><Link href="/login" className="hover:text-primary transition-colors">Log in</Link></li>
-              <li><Link href="/signup" className="hover:text-primary transition-colors">Sign up</Link></li>
+              <li><Link href="/pricing" className="hover:text-primary transition-colors">Pricing Plans</Link></li>
+              <li><Link href="/login" className="hover:text-primary transition-colors">Member Log In</Link></li>
+              <li><Link href="/signup" className="hover:text-primary transition-colors">Create Free Account</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-3 text-sm font-semibold text-foreground">Legal</h4>
+            <p className="mb-3 text-sm font-semibold text-foreground uppercase tracking-wider">Legal</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link></li>
@@ -69,8 +97,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Designora. All rights reserved.
+        <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground space-y-1">
+          <p>&copy; {new Date().getFullYear()} Designora. All rights reserved.</p>
+          <p>
+            Privacy-first in-browser processing built with modern{" "}
+            <a
+              href="https://webassembly.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              WebAssembly
+            </a>{" "}
+            and HTML5 Canvas standards.
+          </p>
         </div>
       </div>
     </footer>

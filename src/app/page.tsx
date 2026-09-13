@@ -288,8 +288,8 @@ export default function Home() {
             AI-powered image tools — fast, private, and affordable
           </div>
           <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl">
-            Professional image tools,{" "}
-            <span className="gradient-text">powered by AI</span>
+            Designora —{" "}
+            <span className="gradient-text">Free AI Image Tools Online</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             Resize, upscale, remove backgrounds, compress, convert, extract colors,
@@ -348,7 +348,7 @@ export default function Home() {
                   >
                     <tool.icon className="h-6 w-6 text-foreground" />
                   </div>
-                  <h3 className="mb-2 text-lg font-semibold">{tool.title}</h3>
+                  <div className="mb-2 text-lg font-semibold text-foreground group-hover:text-primary transition-colors">{tool.title}</div>
                   <p className="text-sm text-muted-foreground">{tool.desc}</p>
                 </div>
               </Link>
@@ -371,19 +371,19 @@ export default function Home() {
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <div className="glass rounded-2xl p-5 text-center">
-            <h3 className="text-lg font-semibold">Browser-Based</h3>
+            <div className="text-lg font-semibold text-foreground">Browser-Based</div>
             <p className="mt-2 text-sm text-muted-foreground">
               Most tools process images locally on your device. No uploads, no waiting for servers.
             </p>
           </div>
           <div className="glass rounded-2xl p-5 text-center">
-            <h3 className="text-lg font-semibold">AI-Powered</h3>
+            <div className="text-lg font-semibold text-foreground">AI-Powered</div>
             <p className="mt-2 text-sm text-muted-foreground">
               AI upscaling, BiRefNet background removal, and AI inpainting support practical image workflows.
             </p>
           </div>
           <div className="glass rounded-2xl p-5 text-center">
-            <h3 className="text-lg font-semibold">Affordable</h3>
+            <div className="text-lg font-semibold text-foreground">Affordable</div>
             <p className="mt-2 text-sm text-muted-foreground">
               Non-AI tools are free and unlimited. AI tools start at 1 credit each — 100 credits for $1.
             </p>
